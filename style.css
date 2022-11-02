@@ -129,7 +129,7 @@ main a:hover {}
 }
 
 .web:hover {
-    transform: translate(-1rem, -1rem);
+    /* transform: translate(-1rem, -1rem); */
     box-shadow: 1.2rem 1.2rem 0 rgb(39, 240, 96);
 }
 
