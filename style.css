@@ -1,0 +1,324 @@
+
+
+/* basic */
+/* header */
+/* header */
+
+header{
+    height: 3rem;
+    background: #29D659;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.logo div {
+    height: 30%;
+    width: 75%;
+    margin-bottom: 10%;
+    transform: rotateZ(-15deg);
+    }
+    .logo {
+        height: 2rem;
+        width: 2rem;
+    }
+
+#footer-di{
+    /* background: red; */
+    z-index: 1003;
+    border: #ff2a2a 2px solid;
+}
+.auth{
+height: 2rem;
+}
+.auth div{
+    pointer-events: none;
+}
+.authstate{
+    position: absolute;
+    /* make it glass form */
+    /* background: #29D659;
+    border-radius: .6rem; */
+    padding: .6rem;
+    top: 3rem;
+    right: 1rem;
+    /* width: 7rem; */
+    width: auto;
+
+    z-index: 1002;
+    display: none;
+
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+background: rgba(149, 255, 193, 0.2);
+
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.cuserimg{
+    /* height: 3rem; */
+    width: auto;
+}
+#profileLink{
+    text-decoration: none;
+    color: black;
+}
+.logged, .notlogged, .makeprofile{
+    display: none;
+}
+.logged{
+
+}
+.auth img{
+    height: 3rem;
+    height: 2.3rem;
+    width: 3rem;
+    width: 2.3rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.cuserimg{
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#bygoogle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main */
+
+
+main {
+    height: auto;
+    /* height: 40vh; */
+    /* box-sizing: border-box; */
+    /* padding: 20vh; */
+    display: flex;
+    flex-wrap: wrap;
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+main a {}
+
+main a:hover {}
+
+
+.web {
+    background: rgb(128, 128, 128);
+    height: 20vw;
+    width: 20vw;
+    transition: .1s linear;
+    margin: 4rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border-radius: .4rem;
+}
+
+.web:hover {
+    transform: translate(-1rem, -1rem);
+    box-shadow: 1.2rem 1.2rem 0 rgb(39, 240, 96);
+}
+
+.web h2 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.web img{
+    height: 100%;
+
+}
+
+
+/* footer */
+
+
+footer{
+    min-height: 20vh;
+    padding: 0% 1rem;
+    /* background: green; */
+    background: #0a0a0a;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem;
+}
+
+.contact, .features, .statics{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background: #29D659;
+    min-height: 15vh;
+    width: 20vw;
+    border-radius: .5rem;
+    transition: .1s linear;
+    background: white;
+}
+
+.contact:hover, .features:hover, .statics:hover{
+    /* background: #29D659; */
+    /* background: #33a353; */
+    /* background: white; */
+    box-shadow: 3px 3px 0px 0px  #29D659;
+}
+.contact img, .features img, .statics img{
+    height: 2rem;
+}
+.features{
+    width: 50vw;
+}
+.features div{
+    background: #1a1a1a;
+    color: white;
+    margin: .1rem;
+}
+.features li{
+    direction: ltr;
+}
+
+.statics b{
+    color: red;
+}
+.statics img{
+    height: 1rem;
+}
+
+
+
+/* elements */
+body{
+    margin: 0;
+}
+
+main div,main p,main h1,main h2,main h3,main h4,main h5,main h6{
+    direction: rtl;
+}
+
+body{
+    overflow-x: hidden;
+    /* background: #1F2721; */
+    margin: 0;
+    /* overflow: hidden; */
+}
+body *{
+    /* box-sizing: border-box; */
+}
+img{
+    /* background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+    height: 2rem;
+}
+input[type=file]{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    background-position: center;
+    background-size: contain;
+}
+li{
+    background: #C0F9D0;
+    border-radius: .4rem;
+    margin-bottom: .2rem;
+}
+label{
+    background: #54db7b;
+    cursor: pointer;
+    padding: .4rem;
+    transition: .2s linear;
+    border-radius: .2rem;
+}
+label:hover{
+    background: #33a353;
+}
+
+
+/* shared */
+.logged, .makeprofile, .notlogged{
+    display: none;
+}
+.box{
+    background-color: #27f060;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: .1s linear;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #33a353;
+    border-radius: .7rem;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account{
+    display: flex;
+    gap: .6rem;
+    justify-content: center;
+    align-items: center;
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+.accountImg{
+    border-radius: 50%;
+    border: #0a0a0a 1px solid;
+}
+
+
+
+.on{
+    background: #1b1b1b;
+    color: white;
+}
+.on:hover{
+    background: #333333;
+}
+
+.red {
+    background: #ff2a2a;
+}
+
+.green {
+    background: #27f060;
+}
+
+.black {
+    background: #0a0a0a;
+}
+
+.white {
+    background: rgb(245, 245, 245);
+}        
+
+/* mobile */
+
+
+/* js created */
+
+
+
