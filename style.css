@@ -104,11 +104,12 @@ main {
     /* box-sizing: border-box; */
     /* padding: 20vh; */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* display: flex; */
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: center;
     align-items: center;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
 main a {}
@@ -316,6 +317,17 @@ label:hover{
 }        
 
 /* mobile */
+
+@media all and (max-width: 500px){
+    main{
+        flex-direction: column;
+    }
+    .web{
+        width: 20rem;
+        height: 20rem;
+
+    }
+}
 
 
 /* js created */
