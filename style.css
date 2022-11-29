@@ -2,15 +2,21 @@
 
 /* basic */
 /* header */
-/* header */
 
 header{
     height: 3rem;
-    background: #29D659;
+    /* background: #29D659; */
+    /* background: #1a1a1a; */
+    background-image: linear-gradient(135deg,  #1a1a1a,  #272727);
+    background-image: linear-gradient(135deg,  #1a1a1a,  #383838);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    color: white;
+    border-bottom: #27f060 2px solid;
+    text-align: center;
 }
 .logo div {
     height: 30%;
@@ -100,23 +106,26 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 main {
     height: auto;
-    /* height: 40vh; */
-    /* box-sizing: border-box; */
-    /* padding: 20vh; */
     display: flex;
-    /* flex-wrap: wrap; */
-    /* display: flex; */
-    /* justify-content: space-around; */
     justify-content: center;
     align-items: center;
-    /* padding: 2rem; */
+    color: white;
 }
-
-main a {}
-
-main a:hover {}
-
-
+.project{
+    /* background: red; */
+    position: relative;
+}
+.project .desc{
+    position: absolute;
+    bottom: 0;
+    background: #1a1a1aa2;
+    left: 0;
+    right: 0;
+    /* font-size: .8rem; */
+    height: 30%;
+    direction: ltr;
+    padding: .5rem;
+}
 .web {
     background: rgb(128, 128, 128);
     height: 20vw;
@@ -128,16 +137,62 @@ main a:hover {}
     position: relative;
     border-radius: .4rem;
 }
+.mainProjectLogo{
+    height: 3rem;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    border-radius: .3rem;
+}
+
+.btns{
+    /* background: red; */
+    position: absolute;
+    right: 1rem;
+    top: 20%;
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 5rem;
+}
+.btns button{
+    background: #29D659;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: .2rem;
+    transition: .1s linear;
+    cursor: pointer;
+}
+.btns button:hover{
+    background: #33a353;
+    background: #27f060;
+}
+.prototypeBtn{
+
+}
+.docsBtn{
+
+}
+.sourceBtn{
+
+}
 
 .web:hover {
     /* transform: translate(-1rem, -1rem); */
     box-shadow: 1.2rem 1.2rem 0 rgb(39, 240, 96);
+    box-shadow: 1.2rem 1.2rem 0 #C0F9D0 ;
+    box-shadow: 1.2rem 1.2rem 0 linear-gradient(180deg, #27f060,#27f060);
+
+    /* background-image: linear-gradient(135deg,  #1a1a1a,  #383838); */
+
 }
 
 .web h2 {
     position: absolute;
     top: 1rem;
     left: 1rem;
+    /* background: #1a1a1a; */
 }
 .web img{
     height: 100%;
@@ -153,14 +208,17 @@ footer{
     padding: 0% 1rem;
     /* background: green; */
     background: #0a0a0a;
+    background-image: linear-gradient(45deg,  #1a1a1a,  #292929);
+
     display: flex;
     justify-content: space-between;
     /* justify-content: center; */
     align-items: center;
     padding: 1rem;
+    border-top: #27f060 2px solid;
 }
 
-.contact, .features, .statics{
+.contact, .statics{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -172,6 +230,24 @@ footer{
     transition: .1s linear;
     background: white;
 }
+.statics{
+    display: flex;
+    /* flex-direction: row; */
+    width: 60%;
+}
+.projectsInfo{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.projectStatics{
+    background: #C0F9D0;
+    background: #33a353;
+    background: #54db7b;
+    border-radius: .3rem;
+    padding: .3rem;
+}
 
 .contact:hover, .features:hover, .statics:hover{
     /* background: #29D659; */
@@ -182,6 +258,8 @@ footer{
 .contact img, .features img, .statics img{
     height: 2rem;
 }
+
+
 .features{
     width: 50vw;
 }
@@ -194,7 +272,7 @@ footer{
     direction: ltr;
 }
 
-.statics b{
+.statics li b{
     color: red;
 }
 .statics img{
@@ -323,9 +401,18 @@ label:hover{
         flex-direction: column;
     }
     .web{
-        width: 20rem;
-        height: 20rem;
-
+        width: 15rem;
+        height: 15rem;
+    }
+    body *{
+        font-size: 1rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: .2rem;
+    }
+    .contact, .features, .statics{
+        width: 90vw;
     }
 }
 
