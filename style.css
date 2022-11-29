@@ -136,6 +136,10 @@ main {
     overflow: hidden;
     position: relative;
     border-radius: .4rem;
+    /* color: white; */
+}
+.web a{
+    color: white;
 }
 .mainProjectLogo{
     height: 3rem;
@@ -148,8 +152,8 @@ main {
 .btns{
     /* background: red; */
     position: absolute;
-    right: 1rem;
-    top: 20%;
+    left: 40%;
+    bottom: 1rem;
     /* padding: 1rem; */
     display: flex;
     flex-direction: column;
