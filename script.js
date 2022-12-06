@@ -102,12 +102,41 @@ await onAuthStateChanged(bygreenAuth, async (user)=>{
             accountsList = docs
             console.log(docs)
             document.querySelector('#accountsCounter').textContent = accountsList.length
-            if(accountsList){
-                // console.log(accountsList, dbUser)
-                ranking('total', 'de')
-            }
+
+            // if(accountsList){
+            //     // console.log(accountsList, dbUser)
+            //     ranking('total', 'de')
+            // }
         })
-})
+
+        getDocs(collection(bygreenDb, 'red')).then((data)=>{
+            let docs = []
+                data.docs.forEach(doc=>{
+                    docs.push({...doc.data(), id: doc.id})
+                })
+                accountsList = docs
+                console.log(docs)
+                document.querySelector('#redCounter').textContent = accountsList.length
+            })
+            getDocs(collection(bygreenDb, 'green')).then((data)=>{
+                let docs = []
+                    data.docs.forEach(doc=>{
+                        docs.push({...doc.data(), id: doc.id})
+                    })
+                    accountsList = docs
+                    console.log(docs)
+                    document.querySelector('#greenCounter').textContent = accountsList.length
+                })
+                getDocs(collection(bygreenDb, 'routes')).then((data)=>{
+                    let docs = []
+                        data.docs.forEach(doc=>{
+                            docs.push({...doc.data(), id: doc.id})
+                        })
+                        accountsList = docs
+                        console.log(docs)
+                        document.querySelector('#routesCounter').textContent = accountsList.length
+                    })
+        })
 
 ///////register 
 document.querySelector('#registerbtn').addEventListener('click', (ev)=>{
