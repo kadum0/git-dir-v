@@ -94,21 +94,21 @@ await onAuthStateChanged(bygreenAuth, async (user)=>{
         dbUser = 'none'
     }
 
-    // getDocs(collection(bygreenDb, 'users')).then((data)=>{
-    //     let docs = []
-    //         data.docs.forEach(doc=>{
-    //             docs.push({...doc.data(), id: doc.id})
-    //         })
-    //         accountsList = docs
-    //         console.log(docs)
-    //         document.querySelector('#accountsCounter').textContent = accountsList.length
-    //         if(accountsList){
-    //             // console.log(accountsList, dbUser)
-    //             ranking('total', 'de')
-    //         }
-
-    //     })
+    getDocs(collection(bygreenDb, 'users')).then((data)=>{
+        let docs = []
+            data.docs.forEach(doc=>{
+                docs.push({...doc.data(), id: doc.id})
+            })
+            accountsList = docs
+            console.log(docs)
+            document.querySelector('#accountsCounter').textContent = accountsList.length
+            if(accountsList){
+                // console.log(accountsList, dbUser)
+                ranking('total', 'de')
+            }
+        })
 })
+
 ///////register 
 document.querySelector('#registerbtn').addEventListener('click', (ev)=>{
     // check if valid data

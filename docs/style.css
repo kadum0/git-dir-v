@@ -121,6 +121,12 @@ main{
 }
 
 
+.imgs{
+
+}
+.imgs img{
+    height: 6rem;
+}
 
 /* footer */
 
@@ -206,6 +212,16 @@ footer{
 body{
     margin: 0;
 }
+hr {
+    border: 0;
+    /* background: #1a1a1a; */
+    border-top: 2px solid #1a1a1a;
+
+    /* background: red; */
+    /* padding: 1rem; */
+    width: 100%;
+}
+
 
 main div,main p,main h1,main h2,main h3,main h4,main h5,main h6{
     direction: rtl;
