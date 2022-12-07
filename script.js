@@ -114,29 +114,30 @@ await onAuthStateChanged(bygreenAuth, async (user)=>{
                 data.docs.forEach(doc=>{
                     docs.push({...doc.data(), id: doc.id})
                 })
-                accountsList = docs
-                console.log(docs)
-                document.querySelector('#redCounter').textContent = accountsList.length
+                document.querySelector('#redCounter').textContent = docs.length
             })
-            getDocs(collection(bygreenDb, 'green')).then((data)=>{
+        getDocs(collection(bygreenDb, 'green')).then((data)=>{
                 let docs = []
                     data.docs.forEach(doc=>{
                         docs.push({...doc.data(), id: doc.id})
                     })
-                    accountsList = docs
-                    console.log(docs)
-                    document.querySelector('#greenCounter').textContent = accountsList.length
-                })
-                getDocs(collection(bygreenDb, 'routes')).then((data)=>{
+                    document.querySelector('#greenCounter').textContent = docs.length
+            })
+
+        getDocs(collection(bygreenDb, 'routes')).then((data)=>{
                     let docs = []
                         data.docs.forEach(doc=>{
                             docs.push({...doc.data(), id: doc.id})
                         })
-                        accountsList = docs
-                        console.log(docs)
-                        document.querySelector('#routesCounter').textContent = accountsList.length
-                    })
+                        console.log(docs[0].upvotes.length + docs[0].downvotes)
+                        document.querySelector('#routesCounter').textContent = docs.length
+                        let votes = 0
+                        docs.forEach(route=> votes += (route.upvotes.length + route.downvotes.length))
+                        // document.querySelector('#votesCounter').textContent = docs.filter
+                        document.querySelector('#votesCounter').innerHTML = votes
+            })
         })
+
 
 ///////register 
 document.querySelector('#registerbtn').addEventListener('click', (ev)=>{
