@@ -250,9 +250,9 @@ document.querySelector('#makeprofilebtn').addEventListener('click', async (ev)=>
 document.querySelector(".auth").addEventListener("click", (e)=>{
     e.target.classList.toggle('on')
     if(e.target.classList.contains('on')){
-        document.querySelector(".authstate").style.display = 'block'
+        document.querySelector(".miniProfile").style.display = 'block'
     }else{
-        document.querySelector(".authstate").style.display = 'none'
+        document.querySelector(".miniProfile").style.display = 'none'
     }
 })
 
