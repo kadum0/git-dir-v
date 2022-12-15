@@ -5,11 +5,7 @@
 
 header{
     height: 3rem;
-    /* background: #29D659; */
-    /* background: #1a1a1a; */
-    background-image: linear-gradient(135deg,  #1a1a1a,  #272727);
     background-image: linear-gradient(135deg,  #1a1a1a,  #383838);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,12 +31,6 @@ header{
         height: 2rem;
         width: 2rem;
     }
-
-#footer-di{
-    /* background: red; */
-    z-index: 1003;
-    border: #ff2a2a 2px solid;
-}
 .auth{
 height: 2rem;
 }
@@ -211,6 +201,95 @@ main {
 
 
 
+  /* leaderboard */
+  .leaderBoard{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 1rem;
+    max-height: 65vh;
+    overflow-y: scroll;
+    background: #242424;
+    border: #27f060 1px solid;
+    max-height: 70vh;
+  }
+  .leaderBoard>span button{
+    background: #33a353;
+    padding: .2rem;
+    cursor: pointer;
+    border-radius: .2rem;
+  }
+  .rankingHeader{
+    display: flex;
+    flex-direction: row;
+    background: #0a0a0a;
+  }
+  .rankingHeader button{
+    width: 10rem;
+    /* flex-grow: 1; */
+  }
+  #accountHeader{
+    min-width: 5rem;
+  }
+  
+  .usersRanking{
+    max-width: 100%;
+  }
+  .rankedAccount{
+    border: #0a0a0a 2px solid;
+    display: flex;
+    color: white;
+    background: #242424;
+    gap: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .ranking{
+    display: flex;
+    flex-direction: column;
+    background: #29D659;
+    border: #a0f7b9 2px solid;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .rankedAccount span, .rankedAccount>h3, .rankedAccount .account{
+    width: 10vw;
+    /* flex-grow: 1; */
+  }
+  .rankedAccount .account{
+    justify-content: flex-start;
+    /* flex-grow: 2; */
+  }
+  .rankedAccount>h3{
+    text-align: center;
+  }
+  .rankedAccount img{
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  .leaderBoard button{
+    background-repeat: no-repeat;
+  }
+  .rankedAccount h3{
+    line-height: 0;
+  }
+  
+  
+/* aside */
+aside{
+    display: none;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: absolute;
+    background: #1a1a1a8c;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+#aside-di{
+    z-index: 3;
+}
+
 /* footer */
 
 
@@ -350,6 +429,8 @@ label:hover{
 }
 .box{
     background-color: #27f060;
+    background-image: linear-gradient(135deg,  #27f060, #22c751);
+
     padding: .5rem;
     border-radius: .5rem;
     transition: .1s linear;
@@ -425,6 +506,38 @@ label:hover{
     .contact, .features, .statics{
         width: 90vw;
     }
+
+      /* leaderboard */
+  .leaderBoard{
+    /* position: absolute; */
+    /* top: 2rem; */
+    /* transform: translate(0, 2rem); */
+    width: 100vw;
+}
+.leaderBoard img{
+    height: 1rem;
+}
+.rankingHeader{
+    height: 2rem;
+    font-size: small;
+}
+.rankedAccount{
+    /* justify-content: space-evenly; */
+    height: fit-content;
+}
+.rankedAccount .account{
+    /* min-width: fit-content; */
+    
+    width: 5rem;
+    /* width: 3rem; */
+}
+.rankedAccount span{
+    font-size: small;
+}
+.rankedAccount>h3, .rankedAccount div{
+font-size: .7rem;
+}
+
 }
 
 

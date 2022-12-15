@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" type="image/jpg" href="imgs/ivc-favicon.ico" />
 
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js');
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -27,6 +34,10 @@
                 <img src="./imgs/bygreen/bygreenlogo.png" alt="">
             </a> 
             -->
+
+            <button id="aside-di" class="box">
+                ?
+            </button>
         </div>
 
 
@@ -60,16 +71,6 @@
                     <p class="cusername"></p>
                 </b>
                 <p class="cuserbio">bio</p>
-                <div class="cuserpoints" style="display: inline;">
-                    <span class="addedRoutes">
-                        <img src="./imgs/publicline/addroutebtn.png" alt="">
-                        <span></span>
-                    </span>
-                    <span class="votes">
-                        <img src="./imgs/publicline/vote.png" alt="">
-                        <span></span>
-                    </span>
-                </div>
                 <button class="box" id="signoutbtn" style="display: inline;">logout</button>
             </div>
             <div class="notlogged">
@@ -118,7 +119,7 @@
                 </a>
             </div>
             <img src="./imgs/publicline/publicline-logo.png" class="mainProjectLogo" alt=""
-                style="background: #1a1a1a;">
+                style="background: #1a1a1a; padding:.2rem;">
 
             <div class="btns">
                 <!-- <button class="prototypeBtn"><a href="https://kadum2.github.io/publicline/home/">نموذج</a></button> -->
@@ -126,6 +127,7 @@
                 <button class="sourceBtn"> <a href="https://www.github.com/kadum2/publicline">مصدر</a> </button>
             </div>
         </div>
+
         <div class="project">
             <div class="web">
                 <a href="https://kadum2.github.io/bygreen/home/">
@@ -138,7 +140,8 @@
                 </div>
                 </a>
             </div>
-            <img src="./imgs/bygreen/bygreenlogo.png" class="mainProjectLogo" style="background: #1a1a1a;">
+            <img src="./imgs/bygreen/bygreenlogo.png" class="mainProjectLogo"
+                style="background: #1a1a1a; padding:.2rem;">
 
             <div class="btns">
                 <!-- <button class="prototypeBtn"><a href="https://kadum2.github.io/bygreen/home/">live</a></button> -->
@@ -167,8 +170,69 @@
         </div> -->
 
     </main>
+
     <aside>
-        <!-- leaderboard -->
+        <div class="flex">
+
+            <!-- leaderboard -->
+            <div class="leaderBoard">
+                <span style="margin-bottom: 1rem;">
+                    <p style="color: white; display: inline;">leaderBoard</p>
+                    <!-- leaderBoard -->
+                    <button id="displayUsersRanking" class="">users</button>
+                    <button id="displayteamsRanking" class="">team</button>
+                    <a href="#me">
+                        <button class="box">me</button>
+                    </a>
+                </span>
+                <div class="rankingHeader">
+                    <!-- <span>none</span> -->
+                    <button id="rankingSorting" class="box">ranking</button>
+                    <button id="accountHeader">account</button>
+                    <button class="box" id="publiclineSorting"
+                        style="background-image: url('./imgs/bygreen/bygreenlogo.png');"></button>
+                    <button class="box" id="bygreenSorting"
+                        style="background-image: url('./imgs/publicline/publicline-logo.png');"></button>
+                    <button class="box" id="totalSorting">total points</button>
+
+                </div>
+
+                <div id="usersRanking">
+
+                    <!-- prototyped account -->
+
+                    <div class="rankedAccount">
+                        <span class="ranking">${index+1}</span>
+                        <div class="account flex" style="justify-content: flex-start;">
+                            <img class="accountImg" style="background-image: url('${account.img}');">
+                            <h3 class="accountUsername ranked">${account.userName}</h3>
+                        </div>
+
+                        <h3 class="red">${account.red.length}</h3>
+                        <h3 class="green">${account.green.length}</h3>
+                        <h3 class="makingGreen">not yet</h3>
+                        <h3 class="total">${account.red.length+account.green.length}</h3>
+                    </div>
+                </div>
+
+                <div id="teamsRanking" style="display: none;">
+                    <!-- prototyped account -->
+                    <div class="rankedAccount">
+                        <span class="ranking">${index+1}</span>
+                        <div class="account">
+                            <img class="accountImg" style="background-image: url('${account.img}');">
+                            <h3 class="accountUsername ranked">${account.userName}</h3>
+                        </div>
+
+                        <h3 class="red">${account.red.length}</h3>
+                        <h3 class="green">${account.green.length}</h3>
+                        <h3 class="makingGreen">not yet</h3>
+                        <h3 class="makingGreen">${account.red.length+account.green.length}</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </aside>
 
