@@ -29,7 +29,7 @@
   ],
 "theme_color": "#27F161", 
 "background_color": "#27F161", 
-"start_url": "/ivc",
+"start_url": "/ivc/",
 "display": "standalone",
 "orientation": "portrait"
 }

@@ -322,7 +322,7 @@ function ranking(based, order){
         if(account.type == 'user'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'id="#me" style="background-color: #29D659"':''}>
     <span class="ranking">${userCounter++}</span>
-        <a href=' http://${window.location.host+'/profile/'+ account.userName} '> <b style='color: white'> 
+        <a href=' http://${window.location.host+'/ivc/profile/'+ account.userName} '> <b style='color: white'> 
     <div class="account">
         <img class="accountImg" style="background-image: url('${account.img}');">
         <h3 class="accountUsername ranked">${account.userName}</h3>
