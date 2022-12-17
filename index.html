@@ -23,19 +23,13 @@
 <body>
     <header>
         <!-- logo -->
-        <div class="logos">
+        <div class="links">
             <a href="https://kadum2.github.io/ivc/" class="logo box">
                 <div class="black"></div>
                 <div class="red"></div>
                 <div class="white"></div>
                 <!-- <div class="green"></div> -->
             </a>
-
-            <!-- 
-            <a href="https://kadum2.github.io/bygreen/home/" class="projectLogo">
-                <img src="./imgs/bygreen/bygreenlogo.png" alt="">
-            </a> 
-            -->
 
             <button id="aside-di" class="box">
                 ?
@@ -47,7 +41,7 @@
         <h2 id="projectName" class="box"> digital volunteer </h2>
 
         <!-- auth; auth-di, auth-state -->
-        <div id="auth-di" class="auth box">
+        <div id="miniProfile-di" class="box">
             <div class="logged" style="height: fit-content;">
                 <div class="flex">
                     <img class="minicuserimg">
@@ -58,48 +52,53 @@
             <div class="notlogged">
                 انشأ حساب
             </div>
-            <div class="makeprofile">
+            <div class="halfLogged">
                 اكمل البيانات
             </div>
         </div>
 
         <div class="miniProfile">
+
             <div class="logged">
-                <a class="flex box" id="profileLink" href="">
-                    <img class="cuserimg">
-                    <p class="cuserusername" style="line-height: 0;">username</p>
+                <p>حسابك </p>
+                <!-- account link? -->
+                <a class="flex box" id="currentAccount" href="">
+                    <img class="accountImg">
+                    <p class="accountUserName" style="line-height: 0;">username</p>
                 </a>
                 <b>
-                    <p class="cusername"></p>
+                    <p class="accountName"></p>
                 </b>
-                <p class="cuserbio">bio</p>
+                <p class="accountBio">bio</p>
                 <button class="box" id="signoutbtn" style="display: inline;">logout</button>
             </div>
-            <div class="notlogged">
+
+            <div class="notLogged">
+                <p>تسجيل الدخول: </p>
                 <div id="register">
                     <input type="text" class="em" placeholder="em">
                     <input type="text" class="pw" placeholder="pw">
                     <button id="registerbtn" class="box">register</button>
                 </div>
-                <!-- <br> -->
+                <br>
                 <div id="signin">
                     <input type="text" class="em" placeholder="em" id="signinUsername">
                     <input type="text" class="pw" placeholder="pw" id="signinUsername">
                     <button id="signinbtn" class="box">signin</button>
                 </div>
                 <h3>or</h3>
-                <button id="bygoogle" class="box">register with google <img src="./imgs/google-logo.png" alt="">
+                <button id="byGoogle" class="box">register with google <img src="./imgs/google-logo.png" alt="">
                 </button>
             </div>
-            <div class="makeprofile">
+            <div class="halfLogged">
                 <p>انت الان مسجل: يجب اكمال البيانات لانشاء حساب </p>
                 <input type="text" id="username" placeholder="username">
                 <input type="text" id="name" placeholder="name">
                 <input type="text" id="bio" placeholder="bio">
                 <input type="file" id="userimg">
-                <button id="makeprofilebtn">submit</button>
+                <button id="makeProfileBtn" class="box">submit</button>
 
-                <button id="signoutsebtn">logout</button>
+                <button id="halfLoggedSignoutBtn" class="box">logout</button>
 
             </div>
 
@@ -108,6 +107,42 @@
     </header>
 
     <main>
+
+        <!-- new project structure -->
+        <a href="https://kadum2.github.io/publicline/home/" class="project"
+            style="background-image: url('./imgs/publicline/pubicline-cover.png');">
+            <img src="./imgs/publicline/publicline-logo.png" class="projectLogo" alt="">
+            <h2 class="projectTitle">pubilicline</h2>
+            <p class="projectDescription">short description of the project
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum error, corrupti commodi sint iusto
+            </p>
+
+            <div class="projectBtns">
+                <button href="https://kadum2.github.io/ivc/docs/publicline-doc"
+                    class="projectDocs box">التفاصيل</button>
+                <button href="https://github.com/kadum2/publicline" class="projectFiles box">المصدر</button>
+            </div>
+        </a>
+
+
+
+        <a href="https://kadum2.github.io/bygreen/home/" class="project"
+            style="background-image: url('./imgs/bygreen/bygreen-cover.png');">
+            <img src="./imgs/bygreen/bygreen-logo.png" class="projectLogo" alt="">
+            <h2 class="projectTitle">bygreen</h2>
+            <p class="projectDescription">short description of the project
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum error, corrupti commodi sint iusto
+            </p>
+
+            <div class="projectBtns">
+                <button href="https://kadum2.github.io/ivc/docs/bygreen-doc" class="projectDocs box">التفاصيل</button>
+                <button href="https://github.com/kadum2/bygreen" class="projectFiles box">المصدر</button>
+            </div>
+        </a>
+
+
+
+        <!-- 
         <div class="project">
             <div class="web">
                 <a href="https://kadum2.github.io/publicline/home/">
@@ -124,7 +159,6 @@
                 style="background: #1a1a1a; padding:.2rem;">
 
             <div class="btns">
-                <!-- <button class="prototypeBtn"><a href="https://kadum2.github.io/publicline/home/">نموذج</a></button> -->
                 <button class="docsBtn"> <a href="docs/publicline-doc">تفاصيل</a></button>
                 <button class="sourceBtn"> <a href="https://www.github.com/kadum2/publicline">مصدر</a> </button>
             </div>
@@ -146,30 +180,11 @@
                 style="background: #1a1a1a; padding:.2rem;">
 
             <div class="btns">
-                <!-- <button class="prototypeBtn"><a href="https://kadum2.github.io/bygreen/home/">live</a></button> -->
                 <button class="docsBtn"> <a href="/docs/bygreen-doc">تفاصيل</a></button>
                 <button class="sourceBtn"> <a href="https://www.github.com/kadum2/bygreen">مصدر</a> </button>
             </div>
         </div>
-
-        <!--                 
-        <div class="project">
-            <div class="web">
-        <h2>odbox</h2>
-        <img src="./imgs/odboxcover.png" alt=""></a>
-        <div class="desc">
-            some more info about the project
-
-        </div>
-        </div>
-        <img src="./imgs/odboxlogo.jpg" class="mainProjectLogo" alt="">
-
-        <div class="btns">
-            <button class="prototypeBtn"><a href="https://kadum2.github.io/odbox/home/">live</a></button>
-            <button class="docsBtn"> <a href="./odboxdoc">docs</a></button>
-            <button class="sourceBtn"> <a href="https://www.github.com/kadum2/odbox">source</a> </button>
-        </div>
-        </div> -->
+-->
 
     </main>
 

@@ -85,6 +85,9 @@ document.querySelector('#signinbtn').addEventListener('click', (ev)=>{
 document.querySelector('#signoutbtn').addEventListener('click', ()=>{
     signOut(bygreenAuth, (result)=>{console.log(result)})
 })
+document.querySelector('#halfLoggedSignoutBtn').addEventListener('click', ()=>{
+    signOut(bygreenAuth, (result)=>{console.log(result)})
+})
 
 // sign with google  
 const provider = new GoogleAuthProvider()
