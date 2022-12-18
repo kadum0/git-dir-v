@@ -152,9 +152,9 @@ document.querySelector('#makeProfileBtn').addEventListener('click', async (ev)=>
 document.querySelector("#miniProfileDi").addEventListener("click", (e)=>{
     e.target.classList.toggle('on')
     if(e.target.classList.contains('on')){
-        document.querySelector(".miniProfile").style.display = 'block'
+        document.querySelector("#miniProfile").style.display = 'block'
     }else{
-        document.querySelector(".miniProfile").style.display = 'none'
+        document.querySelector("#miniProfile").style.display = 'none'
     }
 })
 
@@ -231,7 +231,6 @@ bygreenSorting.addEventListener('click', (ev)=>{
         document.querySelectorAll('.notlogged').forEach(e=>e.style.display = 'block')
         document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
         document.querySelectorAll('.makeprofile').forEach(e=>e.style.display = 'none')
-
         dbUser = 'none'
     }
 
@@ -250,20 +249,46 @@ bygreenSorting.addEventListener('click', (ev)=>{
             }
         })
 
-        getDocs(collection(bygreenDb, 'red')).then((data)=>{
-            let docs = []
-                data.docs.forEach(doc=>{
-                    docs.push({...doc.data(), id: doc.id})
-                })
-                document.querySelector('#redCounter').textContent = docs.length
-            })
-        getDocs(collection(bygreenDb, 'green')).then((data)=>{
+        // getDocs(collection(bygreenDb, 'red')).then((data)=>{
+        //     let docs = []
+        //         data.docs.forEach(doc=>{
+        //             docs.push({...doc.data(), id: doc.id})
+        //         })
+        //         document.querySelector('#redCounter').textContent = docs.length
+        //     })
+        // getDocs(collection(bygreenDb, 'green')).then((data)=>{
+        //         let docs = []
+        //             data.docs.forEach(doc=>{
+        //                 docs.push({...doc.data(), id: doc.id})
+        //             })
+        //             document.querySelector('#greenCounter').textContent = docs.length
+        //     })
+
+            getDocs(collection(bygreenDb, 'pins')).then((data)=>{
                 let docs = []
                     data.docs.forEach(doc=>{
                         docs.push({...doc.data(), id: doc.id})
                     })
-                    document.querySelector('#greenCounter').textContent = docs.length
+
+                    let red = 0
+                    let green = 0
+                    let yellow = 0
+                    let redToGreen = 0
+
+                    docs.forEach(generalPin=>{
+                        generalPin.afterImgs?red++:green++
+                        generalPin.next?yellow++:null
+                        generalPin.redToGreen?redToGreen++:null
+                    })
+
+                    document.querySelector('#redCounter').textContent = red
+                    document.querySelector('#greenCounter').textContent = green
+                    document.querySelector('#yellowCounter').textContent = yellow
+                    // document.querySelector('#redToGreenCounter').textContent = green
             })
+
+
+
 
         getDocs(collection(bygreenDb, 'routes')).then((data)=>{
                     let docs = []

@@ -484,10 +484,6 @@ label:hover{
     main{
         flex-direction: column;
     }
-    .web{
-        width: 15rem;
-        height: 15rem;
-    }
     body *{
         font-size: .8rem;
     }
@@ -498,43 +494,13 @@ label:hover{
     .contact, .features, .statics{
         width: 90vw;
     }
-
-
-    .point button{
-        /* height: ; */
-        /* width: .1rem; */
-    }
       /* leaderboard */
-  .leaderBoard{
-    /* position: absolute; */
-    /* top: 2rem; */
-    /* transform: translate(0, 2rem); */
-    width: 100vw;
-}
-.leaderBoard img{
-    height: 1rem;
-}
-.rankingHeader{
-    height: 2rem;
-    font-size: small;
-}
-.rankedAccount{
-    /* justify-content: space-evenly; */
-    height: fit-content;
-}
-.rankedAccount .account{
-    /* min-width: fit-content; */
-    
-    width: 5rem;
-    /* width: 3rem; */
-}
-.rankedAccount span{
-    font-size: small;
-}
-.rankedAccount>h3, .rankedAccount div{
-/* font-size: .7rem; */
-}
-
+    .leaderBoard{
+        width: 90vw;
+    }
+    .rankingHeader{
+        height: 2rem;
+    }
 }
 
 
