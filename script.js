@@ -37,7 +37,7 @@ let type
 let accountsList = []
 
 ///////register 
-document.querySelector('#registerbtn').addEventListener('click', (ev)=>{
+document.querySelector('#registerBtn').addEventListener('click', (ev)=>{
     // check if valid data
 
     // send 
@@ -63,7 +63,7 @@ document.querySelector('#registerbtn').addEventListener('click', (ev)=>{
 })
 
 //////signin
-document.querySelector('#signinbtn').addEventListener('click', (ev)=>{
+document.querySelector('#signinBtn').addEventListener('click', (ev)=>{
     console.log('to sign in')
     console.log(ev.target.parentElement)
     // console.log('click signin', document.querySelector('#signinUsername').value.length)
@@ -82,7 +82,7 @@ document.querySelector('#signinbtn').addEventListener('click', (ev)=>{
 })
 
 //////signout 
-document.querySelector('#signoutbtn').addEventListener('click', ()=>{
+document.querySelector('#signoutBtn').addEventListener('click', ()=>{
     signOut(bygreenAuth, (result)=>{console.log(result)})
 })
 document.querySelector('#halfLoggedSignoutBtn').addEventListener('click', ()=>{
@@ -91,13 +91,13 @@ document.querySelector('#halfLoggedSignoutBtn').addEventListener('click', ()=>{
 
 // sign with google  
 const provider = new GoogleAuthProvider()
-document.querySelector('#bygoogle').addEventListener('click', ()=>{
+document.querySelector('#byGoogle').addEventListener('click', ()=>{
     signInWithPopup(bygreenAuth, provider).then((cred)=>console.log(cred))
 
 })
 
 //////make profile; 
-document.querySelector('#makeprofilebtn').addEventListener('click', async (ev)=>{
+document.querySelector('#makeProfileBtn').addEventListener('click', async (ev)=>{
     //////////set user in the users collection user current user uid 
     let q = query(collection(bygreenDb, 'users'), where('username', '==', ev.target.parentElement.querySelector('#username').value))
     let foundDoc = await getDocs(q)
@@ -149,8 +149,7 @@ document.querySelector('#makeprofilebtn').addEventListener('click', async (ev)=>
 
 
 //////////////////ui-js; 
-////authstate
-document.querySelector(".auth").addEventListener("click", (e)=>{
+document.querySelector("#miniProfileDi").addEventListener("click", (e)=>{
     e.target.classList.toggle('on')
     if(e.target.classList.contains('on')){
         document.querySelector(".miniProfile").style.display = 'block'
@@ -159,9 +158,9 @@ document.querySelector(".auth").addEventListener("click", (e)=>{
     }
 })
 
-document.querySelector('#aside-di').addEventListener('click', (ev)=>{
+document.querySelector('#asideDi').addEventListener('click', (ev)=>{
     ev.target.classList.toggle('on')
-    ev.target.classList.contains('on')?document.querySelector('aside').style.display = 'block':document.querySelector('aside').style.display = 'none'
+    ev.target.classList.contains('on')?document.querySelector('aside').style.display = 'flex':document.querySelector('aside').style.display = 'none'
 })
 
 
@@ -185,7 +184,7 @@ bygreenSorting.addEventListener('click', (ev)=>{
 
 /////////////////////getting; 
 
-await onAuthStateChanged(bygreenAuth, async (user)=>{
+    await onAuthStateChanged(bygreenAuth, async (user)=>{
     console.log('authstatefun', dbUser)
     if(user){
         console.log('from auth ', user)
@@ -281,9 +280,11 @@ await onAuthStateChanged(bygreenAuth, async (user)=>{
     })
 
 
+/////////////////sending 
+
+
 
 //////////// functions
-
 function ranking(based, order){
 
         // restructure the accounts array
@@ -324,19 +325,20 @@ function ranking(based, order){
     orderedUserElements = `${intendedOrder.map((account, index)=>{
         if(account.type == 'user'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'id="#me" style="background-color: #29D659"':''}>
-    <span class="ranking">${userCounter++}</span>
-        <a href=' http://${window.location.host+'/ivc/profile/'+ account.userName} '> <b style='color: white'> 
-    <div class="account">
-        <img class="accountImg" style="background-image: url('${account.img}');">
-        <h3 class="accountUsername ranked">${account.userName}</h3>
-    </div>
-        
-        </b> </a>
 
-    <h3 class="publiclineCounter">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</h3>
-    <h3 class="bygreenCounter">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</h3>
-    <h3 class="total">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</h3>
-</div>
+        <div class="ranking points">${userCounter++}</div>
+        <div href=' http://${window.location.host+'/ivc/profile/'+ account.userName}' class="account">
+            <img class="accountImg" style="background-image: url('${account.img}');">
+            <h3 class="accountUsername ranked">${account.userName}</h3>
+        </div>
+            
+
+        <div class='point'>
+    <div class="publiclineCounter points">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</div>
+    <div class="bygreenCounter points">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</div>
+    <div class="total points">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</div>
+    </div>
+        </div>
     `}
 })}`
 
@@ -345,15 +347,15 @@ function ranking(based, order){
     orderedteamElements = `${intendedOrder.map((account, index)=>{
         if(account.type == 'team'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'style="background-color: #29D659"':''}>
-    <span class="ranking">${teamCounter++}</span>
-    <div class="account">
-        <img class="accountImg" style="background-image: url('${account.img}');">
-        <h3 class="accountUsername ranked">${account.userName}</h3>
-    </div>
+        <div class="ranking points">${teamCounter++}</div>
+        <div href='href=' http://${window.location.host+'/ivc/profile/'+ account.userName} '' class="account">
+            <img class="accountImg" style="background-image: url('${account.img}');">
+            <h3 class="accountUsername ranked">${account.userName}</h3>
+        </div>
 
-    <h3 class="publiclineCounter">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</h3>
-    <h3 class="bygreenCounter">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</h3>
-    <h3 class="total">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</h3>
+    <div class="publiclineCounter points">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</div>
+    <div class="bygreenCounter points">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</div>
+    <div class="total points">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</div>
 </div>
     `}
         })}`
