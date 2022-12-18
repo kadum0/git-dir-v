@@ -185,7 +185,8 @@ bygreenSorting.addEventListener('click', (ev)=>{
 /////////////////////getting; 
 
     await onAuthStateChanged(bygreenAuth, async (user)=>{
-    console.log('authstatefun', dbUser)
+    console.log('onauthstate; ', user)
+
     if(user){
         console.log('from auth ', user)
         authUser = user
@@ -200,16 +201,19 @@ bygreenSorting.addEventListener('click', (ev)=>{
                 // document.querySelector('.addYellow').style.display = 'block'
             }
         })
+
         let dbUserDoc = await getDoc(doc(bygreenDb, 'users', user.uid))
         dbUser = dbUserDoc.data()
+
+
 
         if(dbUser){
         dbUser.id = dbUserDoc.id
 
             ////registered
             document.querySelectorAll('.logged').forEach(e=>{e.style.display = 'block'})
-            document.querySelectorAll('.makeprofile').forEach(e=>e.style.display = 'none')
-            document.querySelectorAll('.notlogged').forEach(e=>e.style.display = 'none')
+            document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'none')
+            document.querySelectorAll('.notLogged').forEach(e=>e.style.display = 'none')
 
             ///insert the basic info; 
             document.querySelector('.minicuserimg').style.backgroundImage = `url('${dbUser.img}')`
@@ -221,16 +225,16 @@ bygreenSorting.addEventListener('click', (ev)=>{
             document.querySelector("#profileLink").href = window.location.host+'/'+ dbUser.userName
         }else{
             /////half registered; make profile
-            document.querySelectorAll('.makeprofile').forEach(e=>e.style.display = 'block')
+            document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'block')
             document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
-            document.querySelectorAll('.notlogged').forEach(e=>e.style.display = 'none')
+            document.querySelectorAll('.notLogged').forEach(e=>e.style.display = 'none')
         }
         
     }else{
         /////not registered
         document.querySelectorAll('.notlogged').forEach(e=>e.style.display = 'block')
         document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
-        document.querySelectorAll('.makeprofile').forEach(e=>e.style.display = 'none')
+        document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'none')
         dbUser = 'none'
     }
 
@@ -249,22 +253,7 @@ bygreenSorting.addEventListener('click', (ev)=>{
             }
         })
 
-        // getDocs(collection(bygreenDb, 'red')).then((data)=>{
-        //     let docs = []
-        //         data.docs.forEach(doc=>{
-        //             docs.push({...doc.data(), id: doc.id})
-        //         })
-        //         document.querySelector('#redCounter').textContent = docs.length
-        //     })
-        // getDocs(collection(bygreenDb, 'green')).then((data)=>{
-        //         let docs = []
-        //             data.docs.forEach(doc=>{
-        //                 docs.push({...doc.data(), id: doc.id})
-        //             })
-        //             document.querySelector('#greenCounter').textContent = docs.length
-        //     })
-
-            getDocs(collection(bygreenDb, 'pins')).then((data)=>{
+    getDocs(collection(bygreenDb, 'pins')).then((data)=>{
                 let docs = []
                     data.docs.forEach(doc=>{
                         docs.push({...doc.data(), id: doc.id})
@@ -285,23 +274,30 @@ bygreenSorting.addEventListener('click', (ev)=>{
                     document.querySelector('#greenCounter').textContent = green
                     document.querySelector('#yellowCounter').textContent = yellow
                     // document.querySelector('#redToGreenCounter').textContent = green
+        })
+    
+    getDocs(collection(bygreenDb, 'shop')).then((data)=>{
+            let docs = []
+                data.docs.forEach(doc=>{
+                    docs.push({...doc.data(), id: doc.id})
+                })
+                // console.log(docs[0].upvotes.length + docs[0].downvotes)
+                document.querySelector('#shopsCounter').textContent = docs.length
+        })
+
+    getDocs(collection(bygreenDb, 'routes')).then((data)=>{
+                let docs = []
+                    data.docs.forEach(doc=>{
+                        docs.push({...doc.data(), id: doc.id})
+                    })
+                    console.log(docs[0].upvotes.length + docs[0].downvotes)
+                    document.querySelector('#routesCounter').textContent = docs.length
+                    let votes = 0
+                    docs.forEach(route=> votes += (route.upvotes.length + route.downvotes.length))
+                    // document.querySelector('#votesCounter').textContent = docs.filter
+                    document.querySelector('#votesCounter').innerHTML = votes
             })
 
-
-
-
-        getDocs(collection(bygreenDb, 'routes')).then((data)=>{
-                    let docs = []
-                        data.docs.forEach(doc=>{
-                            docs.push({...doc.data(), id: doc.id})
-                        })
-                        console.log(docs[0].upvotes.length + docs[0].downvotes)
-                        document.querySelector('#routesCounter').textContent = docs.length
-                        let votes = 0
-                        docs.forEach(route=> votes += (route.upvotes.length + route.downvotes.length))
-                        // document.querySelector('#votesCounter').textContent = docs.filter
-                        document.querySelector('#votesCounter').innerHTML = votes
-            })
     })
 
 
