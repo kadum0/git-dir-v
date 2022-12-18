@@ -326,17 +326,17 @@ function ranking(based, order){
         if(account.type == 'user'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'id="#me" style="background-color: #29D659"':''}>
 
-        <div class="ranking points">${userCounter++}</div>
+        <div class="ranking point">${userCounter++}</div>
         <div href=' http://${window.location.host+'/ivc/profile/'+ account.userName}' class="account">
             <img class="accountImg" style="background-image: url('${account.img}');">
             <h3 class="accountUsername ranked">${account.userName}</h3>
         </div>
             
 
-        <div class='point'>
-    <div class="publiclineCounter points">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</div>
-    <div class="bygreenCounter points">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</div>
-    <div class="total points">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</div>
+        <div class='points'>
+    <div class="publiclineCounter point">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</div>
+    <div class="bygreenCounter point">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</div>
+    <div class="total point">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</div>
     </div>
         </div>
     `}
@@ -347,16 +347,18 @@ function ranking(based, order){
     orderedteamElements = `${intendedOrder.map((account, index)=>{
         if(account.type == 'team'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'style="background-color: #29D659"':''}>
-        <div class="ranking points">${teamCounter++}</div>
+        <div class="ranking point">${teamCounter++}</div>
         <div href='href=' http://${window.location.host+'/ivc/profile/'+ account.userName} '' class="account">
             <img class="accountImg" style="background-image: url('${account.img}');">
             <h3 class="accountUsername ranked">${account.userName}</h3>
         </div>
 
-    <div class="publiclineCounter points">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</div>
-    <div class="bygreenCounter points">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</div>
-    <div class="total points">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</div>
-</div>
+        <div class='points'>
+    <div class="publiclineCounter point">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</div>
+    <div class="bygreenCounter point">${(account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0)}</div>
+    <div class="total point">${((account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)) + ((account.red[0]?account.red.length:0)+(account.green[0]?account.green.length:0))}</div>
+    </div>
+        </div>
     `}
         })}`
 

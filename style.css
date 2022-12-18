@@ -211,6 +211,7 @@ aside{
 .leaderBoard button{
     background-repeat: no-repeat;
 }
+
 .rankingSections button{
     background: #33a353;
     padding: .2rem;
@@ -218,22 +219,23 @@ aside{
     border-radius: .2rem;
     /* width: fit-content; */
 }
+
 .rankingHeader{
     display: flex;
     flex-direction: row;
     background: #0a0a0a;
     justify-content: space-between;
 }
-.rankingHeader .point{
-    gap: 0;
-}
-.rankingHeader .point button{
-    padding: 1rem;
+.rankingHeader img{
+    min-height: 3rem;
+    min-width: 3rem;
 }
 .rankingHeader button{
+    padding: 1rem;
     width: 100%;
     width: fit-content;
 }
+
 .rankedAccount{
     border: #0a0a0a 2px solid;
     display: flex;
@@ -246,40 +248,21 @@ aside{
     max-width: 100%;
     box-sizing: border-box;
 }
-.rankedAccount>div{
-    /* width: 20%; */
-    /* width: fit-content; */
-    overflow: hidden;
-    text-align: center;
-}
-.rankedAccount .account{
-    /* width: fit-content; */
+.points{
+    display: flex;
+    width: 7rem;
+    justify-content: space-between;
+    
 }
 .point{
-    display: flex;
-    /* gap: 1rem; */
-    /* justify-content: space-between; */
-    /* background: red; */
-    width: 7rem;
-    /* width: 20%; */
-    justify-content: space-between;
-}
-.point div, .point button{
-    /* padding: .3rem; */
-}
-.points{
+    text-align: center;
     font-size: 2rem;
-    /* width: fit-content; */
 }
-
 .ranking{
     display: flex;
     flex-direction: column;
     background: #29D659;
     border: #a0f7b9 2px solid;
-}
-.rankedAccount .account{
-    justify-content: flex-start;
 }
 .rankedAccount .accountImg{
     min-height: 2rem;
@@ -288,11 +271,12 @@ aside{
 .rankedAccount h3{
     line-height: 0;
 }
+.rankedAccount .account:hover{
+    background: #3ac962;
+}
 
 
 /* footer */
-
-
 footer{
     min-height: 20vh;
     background-image: linear-gradient(45deg,  #1a1a1a,  #292929);
