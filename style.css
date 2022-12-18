@@ -32,15 +32,10 @@ header{
     }
 
 #asideDi{
-    /* height: 3rem; */
-    /* width: 3rem; */
     padding: .7rem;
     z-index: 10;
 }
 
-#miniProfileDi div{
-    pointer-events: none;
-}
 
 #miniProfile{
     position: absolute;
@@ -51,14 +46,32 @@ header{
     display: none;
 
     background: rgba(149, 255, 193, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 
-z-index: 1002;
+    z-index: 1002;
 }
+#miniProfileDi div {
+    pointer-events: none;
+    /* padding: .2rem; */
+}
+#miniProfileDi {
+    padding: .1rem;
+}
+#miniProfileDi img{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+#miniProfile img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
 .logged, .notlogged, .halfLogged{
     display: none;
 }
@@ -77,15 +90,6 @@ z-index: 1002;
     text-decoration: none;
     color: black;
 }
-/* .miniProfile img{
-    height: 3rem;
-    height: 2.3rem;
-    width: 3rem;
-    width: 2.3rem;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-} */
 
 .currentAccount .accountImg{
     height: 3rem;
@@ -405,20 +409,11 @@ button{
     background-size: contain;
 }
 
-label{
-    background: #54db7b;
-    cursor: pointer;
-    padding: .4rem;
-    transition: .2s linear;
-    border-radius: .2rem;
-}
-label:hover{
-    background: #33a353;
-}
-
-
 /* shared */
 .logged, .makeprofile, .notlogged{
+    display: none;
+}
+.teamEle{
     display: none;
 }
 .box{

@@ -111,9 +111,9 @@ document.querySelector('#makeProfileBtn').addEventListener('click', async (ev)=>
     if(!found){
         console.log('no taken')
 
-        let fileRef = ref(bygreenStorage, '/userimgs/' + new Date().toISOString().replace(/:/g, '-') +document.querySelector("#userimg").files[0].name.replaceAll(" ","") )
+        let fileRef = ref(bygreenStorage, '/user-imgs/' + new Date().toISOString().replace(/:/g, '-') +document.querySelector("#userImg").files[0].name.replaceAll(" ","") )
 
-            uploadBytes(fileRef, document.querySelector("#userimg").files[0]).then(res=>{
+            uploadBytes(fileRef, document.querySelector("#userImg").files[0]).then(res=>{
                 getDownloadURL(res.ref).then(url=>{
                     console.log(url)
                     let imgUrl = url
@@ -215,26 +215,35 @@ bygreenSorting.addEventListener('click', (ev)=>{
             document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'none')
             document.querySelectorAll('.notLogged').forEach(e=>e.style.display = 'none')
 
+            // di
+            document.querySelector('#currentAccountImgDi').style.backgroundImage = `url('${dbUser.img}')`
+            document.querySelector("#currentAccountUsernameDi").textContent = '@'+ dbUser.userName
+
+            // mini
+            document.querySelector('#currentAccountImgMini').style.backgroundImage = `url('${dbUser.img}')`
+            document.querySelector("#currentAccountUsernameMini").textContent = '@'+ dbUser.userName
+            document.querySelector("#currentAccountName").textContent = dbUser.name
+            document.querySelector("#currentAccountBio").textContent = dbUser.bio
+            document.querySelector("#currentAccountLink").href = window.location.host+'/'+ dbUser.userName
+
             ///insert the basic info; 
-            document.querySelector('.minicuserimg').style.backgroundImage = `url('${dbUser.img}')`
             // document.querySelector(".minicuserusername").textContent = '@'+ dbUser.userName
-            document.querySelector('.cuserimg').style.backgroundImage = `url('${dbUser.img}')`
-            document.querySelector(".cuserusername").textContent = '@'+ dbUser.userName
-            document.querySelector(".cusername").textContent = dbUser.name
-            document.querySelector(".cuserbio").textContent = dbUser.bio
-            document.querySelector("#profileLink").href = window.location.host+'/'+ dbUser.userName
+            // document.querySelector('.cuserimg').style.backgroundImage = `url('${dbUser.img}')`
+            // document.querySelector(".cuserusername").textContent = '@'+ dbUser.userName
+            // document.querySelector(".cusername").textContent = dbUser.name
+            // document.querySelector(".cuserbio").textContent = dbUser.bio
         }else{
             /////half registered; make profile
-            document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'block')
             document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
+            document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'block')
             document.querySelectorAll('.notLogged').forEach(e=>e.style.display = 'none')
         }
         
     }else{
         /////not registered
-        document.querySelectorAll('.notlogged').forEach(e=>e.style.display = 'block')
         document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
         document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'none')
+        document.querySelectorAll('.notlogged').forEach(e=>e.style.display = 'block')
         dbUser = 'none'
     }
 

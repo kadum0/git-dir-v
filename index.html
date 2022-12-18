@@ -43,12 +43,14 @@
         <!-- auth; auth-di, auth-state -->
         <div id="miniProfileDi" class="box">
             <div class="logged" style="height: fit-content;">
-                <div class="flex">
-                    <img class="minicuserimg">
+                <div class="flex currentAccount">
+                    <img id="currentAccountImgDi">
+                    <p id="currentAccountUsernameDi">username</p>
                     <p class="teamEle" style="line-height: none; padding:0;
                 color:white; font-size: .8rem;">team</p>
                 </div>
             </div>
+
             <div class="notlogged">
                 انشأ حساب
             </div>
@@ -62,15 +64,27 @@
             <div class="logged">
                 <p>حسابك </p>
                 <!-- account link? -->
-                <a class="flex box" id="currentAccount" href="">
-                    <img class="accountImg">
-                    <p class="accountUserName" style="line-height: 0;">username</p>
+                <a class="flex box currentAccount" id="currentAccountLink" href="">
+                    <img id="currentAccountImgMini">
+                    <p id="currentAccountUsernameMini" style="line-height: 0;">username</p>
                 </a>
                 <b>
-                    <p class="accountName"></p>
+                    <p id="currentAccountName"></p>
                 </b>
-                <p class="accountBio">bio</p>
+                <p id="currentAccountBio">bio</p>
                 <button class="box" id="signoutBtn" style="display: inline;">logout</button>
+            </div>
+            <div class="halfLogged">
+                <p>انت الان مسجل: يجب اكمال البيانات لانشاء حساب </p>
+                <input type="text" id="username" placeholder="username">
+                <input type="text" id="name" placeholder="name">
+                <input type="text" id="bio" placeholder="bio">
+                <label for="userImg" id="userImgUpload" class="box">upload image</label>
+                <input type="file" id="userImg">
+                <button id="makeProfileBtn" class="box">submit</button>
+
+                <button id="halfLoggedSignoutBtn" class="box">logout</button>
+
             </div>
 
             <div class="notLogged">
@@ -89,17 +103,6 @@
                 <h3>or</h3>
                 <button id="byGoogle" class="box">register with google <img src="./imgs/google-logo.png" alt="">
                 </button>
-            </div>
-            <div class="halfLogged">
-                <p>انت الان مسجل: يجب اكمال البيانات لانشاء حساب </p>
-                <input type="text" id="username" placeholder="username">
-                <input type="text" id="name" placeholder="name">
-                <input type="text" id="bio" placeholder="bio">
-                <input type="file" id="userimg">
-                <button id="makeProfileBtn" class="box">submit</button>
-
-                <button id="halfLoggedSignoutBtn" class="box">logout</button>
-
             </div>
 
         </div>
