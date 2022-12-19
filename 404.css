@@ -1,0 +1,579 @@
+
+
+
+
+/* basic */
+/* header */
+
+header{
+    height: 3rem;
+    background-image: linear-gradient(135deg,  #1a1a1a,  #333333);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: #27f060 2px solid;
+    position: relative;
+}
+.links{
+    display: flex;
+    /* padding: 1rem; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.logo div{
+    height: 30%;
+    width: 75%;
+    margin-bottom: 10%;
+    transform: rotateZ(-15deg);
+    }
+.logo {
+        height: 3rem;
+        width: 3rem;
+    }
+
+#asideDi{
+    padding: .7rem;
+    z-index: 10;
+}
+
+
+#miniProfile{
+    position: absolute;
+    padding: .6rem;
+    top: 3rem;
+    right: 1rem;
+
+    display: none;
+
+    background: rgba(149, 255, 193, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    z-index: 1002;
+}
+#miniProfile img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#miniProfileDi div {
+    pointer-events: none;
+    /* padding: .2rem; */
+}
+#miniProfileDi {
+    padding: .1rem;
+}
+#miniProfileDi img{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.logged, .notlogged, .halfLogged{
+    display: none;
+}
+
+/* not logged */
+#register, #signin{
+    /* background: #22c7519a; */
+    background: #22c751;
+    background: #68F690;
+    background-image: linear-gradient(135deg,  #68F690,  #22c751);
+
+    border-radius: .5rem;
+}
+/* logged */
+#currentAccount{
+    text-decoration: none;
+    color: black;
+}
+#currentAccountImgDi{
+    background-position: center;
+    background-size: cover;
+}
+.currentAccount .accountImg{
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#byGoogle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* half logged */
+
+
+
+/* main */
+
+
+main {
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: linear-gradient(45deg,  #fdfdfd,  #dbdbdb);
+    /* background: red; */
+    padding: 1.2rem;
+    gap: 3rem;
+}
+
+#profileInfo{
+    display: flex;
+    justify-content: center;
+    /* background: green; */
+    width: 100%;
+}
+
+#mainInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: red;
+    background: #f7f7f7;
+    border: #464646 1px solid;
+    border-radius: 2rem;
+    color: black;
+    /* background-image: linear-gradient(135deg, #dbdbdb, #f7f7f7); */
+
+    width: 100%;
+    gap: 1rem;
+}
+#profileImg{
+    height: 8rem;
+    width: 8rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#profileSM img{
+    filter: grayscale(1.0);
+}
+#editSection{
+    padding: 1rem;
+    border-radius: 1rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    gap: 1rem;
+    background: #dbdbdb;
+    background-image: linear-gradient(135deg, #dbdbdb, #f7f7f7);
+    color: #0a0a0a;
+    z-index: 5;
+}
+#editSection input{
+    width: fit-content;
+    /* padding: 1rem; */
+    font-size: 1.3rem;
+}
+
+#profileProjectStatics{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* background: red; */
+}
+
+.project{
+    width: 80vw;
+    border: #272727 2px solid;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+    padding: 1rem;
+    position: relative;
+    background-image: linear-gradient(135deg, #ffffff, #f7f7f7);
+
+}
+.projectLogo{
+    /* height: 2rem; */
+    /* width: 2rem; */
+    background-color: #1a1a1a;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    padding: .6rem;
+    border-radius: .3rem;
+}
+.contributions{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 80%;
+    gap: 1rem;
+}
+.contribution{
+    background-image: linear-gradient(135deg, #22c751, #27f060);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+#messages{
+    position: absolute;
+    top: 2rem;
+    right: 45vw;
+    text-align: center;
+}
+#messages div{
+    display: none;
+}
+
+
+/* aside */
+aside{
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    background: #1a1a1a8c;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+
+    z-index: 2;
+}
+#aside-di{
+    z-index: 3;
+}
+
+
+
+
+  /* leaderboard */
+.leaderBoard{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 1rem;
+    max-height: 65vh;
+    /* overflow-y: scroll; */
+    background: #242424;
+    background-image: linear-gradient(135deg,  #1a1a1a,  #2b2b2b);
+
+    border: #27f060 1px solid;
+    max-height: 70vh;
+    /* box-sizing: border-box; */
+    /* overflow: hidden; */
+}
+.leaderBoard button{
+    background-repeat: no-repeat;
+}
+
+.rankingSections button{
+    background: #33a353;
+    padding: .2rem;
+    cursor: pointer;
+    border-radius: .2rem;
+    /* width: fit-content; */
+}
+
+.rankingHeader{
+    display: flex;
+    flex-direction: row;
+    background: #0a0a0a;
+    justify-content: space-between;
+}
+.rankingHeader img{
+    min-height: 3rem;
+    min-width: 3rem;
+}
+.rankingHeader button{
+    padding: 1rem;
+    width: 100%;
+    width: fit-content;
+}
+
+.rankedAccount{
+    border: #0a0a0a 2px solid;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    /* background: #242424; */
+    background-image: linear-gradient(135deg,  #1a1a1a,  #2b2b2b);
+
+    gap: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.points{
+    display: flex;
+    width: 7rem;
+    justify-content: space-between;
+    
+}
+.point{
+    text-align: center;
+    font-size: 2rem;
+}
+.ranking{
+    display: flex;
+    flex-direction: column;
+    background: #29D659;
+    border: #a0f7b9 2px solid;
+}
+.rankedAccount .accountImg{
+    min-height: 2rem;
+    min-width: 2rem;
+}
+.rankedAccount h3{
+    line-height: 0;
+}
+.rankedAccount .account:hover{
+    background: #3ac962;
+}
+
+
+/* footer */
+footer{
+    min-height: 20vh;
+    background-image: linear-gradient(45deg,  #1a1a1a,  #292929);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: #27f060 2px solid;
+    gap: 1rem;
+}
+
+.contact, .statics, .features{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    min-height: 15vh;
+    border-radius: .5rem;
+    transition: .1s linear;
+    background: white;
+    padding: 1rem;
+}
+
+.contact:hover, .features:hover, .statics:hover{
+    box-shadow: 3px 3px 0px 0px  #29D659;
+}
+.logoPart{
+    /* background: red; */
+    height: 1rem;
+    width: 2rem;
+    margin-top: 1rem;
+    transform: rotateZ(-15deg);
+    z-index: 1;
+}
+
+
+.projectsInfo{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: .3rem;
+}
+
+.projectStatics{
+    background: #54db7b;
+    background-image: linear-gradient(135deg, #6ada89, #3ac962 );
+    /* background: red; */
+    border-radius: .3rem;
+    padding: .3rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.statics li b{
+    color: red;
+}
+.statics img{
+    height: 1rem;
+}
+.statics li{
+    background: #C0F9D0;
+    background-image: linear-gradient(135deg, #9cffb8, #54ff85 );
+
+    border-radius: .4rem;
+    margin-bottom: .2rem;
+}
+
+
+.features{
+    width: fit-content;
+}
+.features img{
+    height: 1rem;
+}
+.features li b{
+    color: red;
+}
+.features li{
+    direction: ltr;
+}
+
+/* .features{
+    width: 50vw;
+}
+.features div{
+    background: #1a1a1a;
+    color: white;
+    margin: .1rem;
+} */
+
+
+
+/* elements */
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main div,main p,main h1,main h2,main h3,main h4,main h5,main h6{
+    direction: rtl;
+}
+
+body *{
+    box-sizing: border-box;
+}
+img{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2rem;
+}
+input[type=text]{
+    font-size: 1rem;
+}
+input[type=file]{
+    display: none;
+    direction: ltr;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    background-position: center;
+    background-size: contain;
+}
+
+::-webkit-scrollbar{width:6px;border-left:1px solid #292929;}
+::-webkit-scrollbar-thumb{background-color: #33a353;}
+
+
+/* shared */
+.logged, .makeprofile, .notlogged, .teamEle, .owner{
+    display: none;
+}
+
+.box{
+    background-color: #27f060;
+    background-image: linear-gradient(135deg,  #27f060, #22c751);
+
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: .1s linear;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #33a353;
+    border-radius: .7rem;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account{
+    display: flex;
+    flex-direction: row;
+    gap: .6rem;
+    justify-content: center;
+    align-items: center;
+    transition: .1s linear;
+    cursor: pointer;
+}
+.accountImg{
+    border-radius: 50%;
+    border: #0a0a0a 1px solid;
+}
+
+.on{
+    background: #1b1b1b;
+    color: white;
+}
+.on:hover{
+    background: #333333;
+}
+
+.red {
+    background: #ff2a2a;
+}
+
+.green {
+    background: #27f060;
+}
+
+.black {
+    background: #1b1b1b;
+}
+
+.white {
+    background: rgb(245, 245, 245);
+}
+
+/* mobile */
+
+@media all and (max-width: 500px){
+    main{
+        flex-direction: column;
+    }
+    body *{
+        font-size: .8rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: .2rem;
+    }
+    .contact, .features, .statics{
+        width: 90vw;
+    }
+      /* leaderboard */
+    .leaderBoard{
+        width: 90vw;
+    }
+    .rankingHeader{
+        height: 2rem;
+    }
+}
+
+
+/* js created */
+
+
+
+
+
