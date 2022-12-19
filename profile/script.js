@@ -267,7 +267,7 @@ let profileAccount
         //check the url and get the username to make profile 
         profile = window.location.href.split('/')[window.location.href.split('/').length-2]
 
-        profile = 'kdm'
+        // profile = 'kdm'
         profileAccount = accountsList.filter(account=>account.userName == profile)[0]
 
 
