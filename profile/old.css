@@ -1,0 +1,460 @@
+
+/* basic */
+/* header */
+
+header{
+    height: 3rem;
+    /* background: #29D659; */
+    /* background: #1a1a1a; */
+    background-image: linear-gradient(135deg,  #1a1a1a,  #272727);
+    background-image: linear-gradient(135deg,  #1a1a1a,  #383838);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: white;
+    border-bottom: #27f060 2px solid;
+    text-align: center;
+}
+.logo div {
+    height: 30%;
+    width: 75%;
+    margin-bottom: 10%;
+    transform: rotateZ(-15deg);
+    }
+    .logo {
+        height: 2rem;
+        width: 2rem;
+    }
+
+#footer-di{
+    /* background: red; */
+    z-index: 1003;
+    border: #ff2a2a 2px solid;
+}
+.auth{
+height: 2rem;
+}
+.auth div{
+    pointer-events: none;
+}
+.authstate{
+    position: absolute;
+    padding: .6rem;
+    top: 3rem;
+    right: 1rem;
+    width: auto;
+
+    z-index: 1002;
+    display: none;
+background: rgba(255, 255, 255, 0.2);
+background: rgba(149, 255, 193, 0.2);
+
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.cuserimg{
+    /* height: 3rem; */
+    width: auto;
+}
+#profileLink{
+    text-decoration: none;
+    color: black;
+}
+.logged, .notlogged, .makeprofile{
+    display: none;
+}
+.logged{
+
+}
+.auth img{
+    height: 3rem;
+    height: 2.3rem;
+    width: 3rem;
+    width: 2.3rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.cuserimg{
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#bygoogle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main */
+
+main{
+    /* background: red; */
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(45deg,  #fdfdfd,  #dbdbdb);
+
+    /* background: #76ff9d; */
+}
+
+.accountInfo{
+    height: 30vh;
+    width: 80vw;
+    /* background: red; */
+    background: #93fdb1;
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    /* justify-content: center; */
+    align-items: center;
+}
+#profileImg{
+    height: 30vh;
+    width: 30vh;
+    background-size: cover;
+    /* background-position: center; */
+    border-radius: 50%;
+}
+.info{
+    margin: 1rem;
+}
+
+.sm{
+
+}
+.sm img{
+    height: 2rem;
+    filter: saturate(0);
+
+}
+
+#edit{
+    display: none;
+    height: 100%;
+    /* width: 100%; */
+    background: red;
+    background: #33a353;
+}
+#editForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* background: #33a353; */
+    gap: 1rem;
+    width: fit-content;
+    /* width: 100%; */
+}
+#editForm input{
+    font-size: 1.3rem;
+}
+#smForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    /* background: #33a353; */
+    /* padding: 1rem; */
+}
+#smForm input{
+    display: block;
+    font-size: 1.3rem;
+}
+
+.project{
+    /* height: 40vh; */
+    padding: 1rem;
+    width: 80vw;
+    background: whitesmoke;
+    border-radius: .8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.project>a{
+    height: 3rem;
+    /* width: 3rem; */
+    position: absolute;
+    top:-1rem;
+    left: -1rem;
+    border: #0a0a0a 1px solid;
+    border-radius: .2rem;
+    transition: .1s linear;
+    cursor: pointer;
+    /* overflow: hidden; */
+}
+.project>a>img{
+    height: 3rem;
+    /* width: 3rem; */
+    /* background-size: cover; */
+}
+.project>img:hover{
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.86)); */
+    /* background: #0a0a0a; */
+}
+/* #plshade{
+    height: 100%;
+    width: 100%;
+    background: #0a0a0a;
+} */
+
+.contribution{
+    height: 2rem;
+    width: 80%;
+    background: #27f060;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .1s linear;
+    margin: .1rem;
+}
+.contribution:hover{
+    background: #33a353;
+}
+.contribution img{
+    height: 100%;
+}
+
+
+
+.message{
+    position: absolute;
+    top: 6rem;
+    right: 50%;
+    transform: translate(50%, 50%);
+    display: none;
+}
+footer{
+    min-height: 20vh;
+    padding: 0% 1rem;
+    /* background: green; */
+    background: #0a0a0a;
+    background-image: linear-gradient(45deg,  #1a1a1a,  #292929);
+
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem;
+    border-top: #27f060 2px solid;
+}
+
+.contact, .statics{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background: #29D659;
+    min-height: 15vh;
+    width: 20vw;
+    border-radius: .5rem;
+    transition: .1s linear;
+    background: white;
+}
+.statics{
+    display: flex;
+    /* flex-direction: row; */
+    width: 60%;
+}
+.projectsInfo{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.projectStatics{
+    background: #C0F9D0;
+    background: #33a353;
+    background: #54db7b;
+    border-radius: .3rem;
+    padding: .3rem;
+}
+
+.contact:hover, .features:hover, .statics:hover{
+    /* background: #29D659; */
+    /* background: #33a353; */
+    /* background: white; */
+    box-shadow: 3px 3px 0px 0px  #29D659;
+}
+.contact img, .features img, .statics img{
+    height: 2rem;
+}
+
+
+.features{
+    width: 50vw;
+}
+.features div{
+    background: #1a1a1a;
+    color: white;
+    margin: .1rem;
+}
+.features li{
+    direction: ltr;
+}
+
+.statics li b{
+    color: red;
+}
+.statics img{
+    height: 1rem;
+}
+
+
+
+/* elements */
+body{
+    margin: 0;
+}
+
+main div,main p,main h1,main h2,main h3,main h4,main h5,main h6{
+    direction: rtl;
+}
+
+body{
+    overflow-x: hidden;
+    /* background: #1F2721; */
+    margin: 0;
+    /* overflow: hidden; */
+}
+body *{
+    /* box-sizing: border-box; */
+}
+img{
+    /* background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+    height: 2rem;
+}
+input[type=file]{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    background-position: center;
+    background-size: contain;
+}
+li{
+    background: #C0F9D0;
+    border-radius: .4rem;
+    margin-bottom: .2rem;
+}
+label{
+    background: #54db7b;
+    cursor: pointer;
+    padding: .4rem;
+    transition: .2s linear;
+    border-radius: .2rem;
+}
+label:hover{
+    background: #33a353;
+}
+
+
+/* shared */
+.logged, .makeprofile, .notlogged{
+    display: none;
+}
+.box{
+    background-color: #27f060;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: .1s linear;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #33a353;
+    border-radius: .7rem;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account{
+    display: flex;
+    gap: .6rem;
+    justify-content: center;
+    align-items: center;
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+.accountImg{
+    border-radius: 50%;
+    border: #0a0a0a 1px solid;
+}
+
+
+
+.on{
+    background: #1b1b1b;
+    color: white;
+}
+.on:hover{
+    background: #333333;
+}
+
+.red {
+    background: #ff2a2a;
+}
+
+.green {
+    background: #27f060;
+}
+
+.black {
+    background: #0a0a0a;
+}
+
+.white {
+    background: rgb(245, 245, 245);
+}        
+
+/* mobile */
+
+@media all and (max-width: 500px){
+    main{
+        flex-direction: column;
+    }
+    .web{
+        width: 15rem;
+        height: 15rem;
+    }
+    body *{
+        font-size: 1rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: .2rem;
+    }
+    .contact, .features, .statics{
+        width: 90vw;
+    }
+}
+
+
+/* js created */
+
+

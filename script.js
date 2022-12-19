@@ -149,9 +149,9 @@ document.querySelector('#makeProfileBtn').addEventListener('click', async (ev)=>
 
 
 //////////////////ui-js; 
-document.querySelector("#miniProfileDi").addEventListener("click", (e)=>{
-    e.target.classList.toggle('on')
-    if(e.target.classList.contains('on')){
+document.querySelector("#miniProfileDi").addEventListener("click", (ev)=>{
+    ev.target.classList.toggle('on')
+    if(ev.target.classList.contains('on')){
         document.querySelector("#miniProfile").style.display = 'block'
     }else{
         document.querySelector("#miniProfile").style.display = 'none'
@@ -183,6 +183,8 @@ bygreenSorting.addEventListener('click', (ev)=>{
 
 
 /////////////////////getting; 
+let profile
+let profileAccount
 
     await onAuthStateChanged(bygreenAuth, async (user)=>{
     console.log('onauthstate; ', user)
@@ -224,14 +226,8 @@ bygreenSorting.addEventListener('click', (ev)=>{
             document.querySelector("#currentAccountUsernameMini").textContent = '@'+ dbUser.userName
             document.querySelector("#currentAccountName").textContent = dbUser.name
             document.querySelector("#currentAccountBio").textContent = dbUser.bio
-            document.querySelector("#currentAccountLink").href = window.location.host+'/'+ dbUser.userName
+            document.querySelector("#currentAccountLink").href = `https://kadum2.github.io/ivc/profile/${dbUser.userName}`
 
-            ///insert the basic info; 
-            // document.querySelector(".minicuserusername").textContent = '@'+ dbUser.userName
-            // document.querySelector('.cuserimg').style.backgroundImage = `url('${dbUser.img}')`
-            // document.querySelector(".cuserusername").textContent = '@'+ dbUser.userName
-            // document.querySelector(".cusername").textContent = dbUser.name
-            // document.querySelector(".cuserbio").textContent = dbUser.bio
         }else{
             /////half registered; make profile
             document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
@@ -247,6 +243,7 @@ bygreenSorting.addEventListener('click', (ev)=>{
         dbUser = 'none'
     }
 
+
     getDocs(collection(bygreenDb, 'users')).then((data)=>{
         let docs = []
             data.docs.forEach(doc=>{
@@ -255,11 +252,7 @@ bygreenSorting.addEventListener('click', (ev)=>{
             accountsList = docs
             console.log(docs)
             document.querySelector('#accountsCounter').textContent = accountsList.length
-
-            if(accountsList){
-                // console.log(accountsList, dbUser)
                 ranking('total', 'de')
-            }
         })
 
     getDocs(collection(bygreenDb, 'pins')).then((data)=>{
@@ -305,7 +298,7 @@ bygreenSorting.addEventListener('click', (ev)=>{
                     docs.forEach(route=> votes += (route.upvotes.length + route.downvotes.length))
                     // document.querySelector('#votesCounter').textContent = docs.filter
                     document.querySelector('#votesCounter').innerHTML = votes
-            })
+        })
 
     })
 
@@ -357,7 +350,7 @@ function ranking(based, order){
 <div class="rankedAccount" ${account.userName == currentUserName?'id="#me" style="background-color: #29D659"':''}>
 
         <div class="ranking point">${userCounter++}</div>
-        <div href=' http://${window.location.host+'/ivc/profile/'+ account.userName}' class="account">
+        <div href=' https://kadum2.github.io/ivc/profile/kdm//${account.userName}' class="account">
             <img class="accountImg" style="background-image: url('${account.img}');">
             <h3 class="accountUsername ranked">${account.userName}</h3>
         </div>
@@ -378,7 +371,7 @@ function ranking(based, order){
         if(account.type == 'team'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'style="background-color: #29D659"':''}>
         <div class="ranking point">${teamCounter++}</div>
-        <div href='href=' http://${window.location.host+'/ivc/profile/'+ account.userName} '' class="account">
+        <div href=' https://kadum2.github.io/ivc/profile/kdm//${account.userName}' class="account">
             <img class="accountImg" style="background-image: url('${account.img}');">
             <h3 class="accountUsername ranked">${account.userName}</h3>
         </div>

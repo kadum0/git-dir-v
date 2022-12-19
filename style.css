@@ -170,10 +170,15 @@ main {
     font-weight: bold;
 }
 
-
-::-webkit-scrollbar{width:6px;border-left:1px solid #292929;}
-::-webkit-scrollbar-thumb{background-color: #33a353;}
-
+#messages{
+    position: absolute;
+    top: 2rem;
+    right: 45vw;
+    text-align: center;
+}
+#messages div{
+    display: none;
+}
 
 /* aside */
 aside{
@@ -408,6 +413,13 @@ button{
     background-position: center;
     background-size: contain;
 }
+
+
+::-webkit-scrollbar{width:6px;border-left:1px solid #292929;}
+::-webkit-scrollbar-thumb{background-color: #33a353;}
+
+
+
 
 /* shared */
 .logged, .makeprofile, .notlogged{
