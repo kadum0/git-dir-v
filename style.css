@@ -54,12 +54,6 @@ header{
 
     z-index: 1002;
 }
-#miniProfile img{
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    background-size: cover;
-}
 
 #miniProfileDi div {
     pointer-events: none;
@@ -401,7 +395,7 @@ body *{
     box-sizing: border-box;
 }
 img{
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 2rem;
