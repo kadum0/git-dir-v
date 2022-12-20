@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile; </title>
+    <title>profile; file</title>
     <!-- <link rel="stylesheet" href="./404.css"> -->
+    <link rel="shortcut icon" type="image/jpg" href="./imgs/ivc-logo.png" />
+
+
     <style>
         /* basic */
         /* header */
@@ -652,9 +655,7 @@
 
         /* js created */
     </style>
-    <link rel="shortcut icon" type="image/jpg" href="../imgs/ivc-logo.png" />
-
-    <!-- <link rel="shortcut icon" type="image/jpg" href=".../imgs/ivc-logo.png" /> -->
+    <!-- <link rel="shortcut icon" type="image/jpg" href="../imgs/ivc-logo.png" /> -->
 
 </head>
 
@@ -675,7 +676,7 @@
         </div>
 
         <!-- title -->
-        <h2 id="projectName" class="box"> profile </h2>
+        <h2 id="projectName" class="box"> profile; file </h2>
 
         <!-- auth; auth-di, auth-state -->
         <div id="miniProfileDi" class="box">
@@ -738,7 +739,7 @@
                     <button id="signinBtn" class="box">signin</button>
                 </div>
                 <h3>or</h3>
-                <button id="byGoogle" class="box">register with google <img src="../imgs/google-logo.png" alt="">
+                <button id="byGoogle" class="box">register with google <img src="./imgs/google-logo.png" alt="">
                 </button>
             </div>
 
@@ -760,10 +761,10 @@
 
                 <div id="profileSM">
                     <a href="" id="profileInstagram">
-                        <img src="../imgs/instagram-logo.png">
+                        <img src="./imgs/instagram-logo.png">
                     </a>
                     <a href="" id="profileTelegram">
-                        <img src="../imgs/telegram-logo.png">
+                        <img src="./imgs/telegram-logo.png">
                     </a>
                 </div>
 
@@ -806,16 +807,16 @@
             <div class="project">
                 <h2>الخط العام</h2>
                 <a href="https://kadum2.github.io/publicline/home/" class="projectLogo"> <img
-                        src="../imgs/publicline/publicline-logo.png" alt="">
+                        src="./imgs/publicline/publicline-logo.png" alt="">
                 </a>
                 <div class="contributions">
                     <div class="contribution">
-                        <img src="../imgs/publicline/add-route-icon.png" alt="">
+                        <img src="./imgs/publicline/add-route-icon.png" alt="">
                         <p>اضافة مسار</p>
                         <p id="profileAddedRoutesCounter">number</p>
                     </div>
                     <div class="contribution">
-                        <img src="../imgs/publicline/vote-icon.png" alt="">
+                        <img src="./imgs/publicline/vote-icon.png" alt="">
                         <p>تصويت</p>
                         <p id="profileVotedCounter">number</p>
                     </div>
@@ -825,21 +826,21 @@
             <div class="project">
                 <h2>بالاخضر</h2>
                 <a href="https://kadum2.github.io/bygreen/home/" class="projectLogo"> <img
-                        src="../imgs/bygreen/bygreen-logo.png" alt="">
+                        src="./imgs/bygreen/bygreen-logo.png" alt="">
                 </a>
                 <div class="contributions">
                     <div class="contribution">
-                        <img src="../imgs/bygreen/green-icon-stroked.png" alt="">
+                        <img src="./imgs/bygreen/green-icon-stroked.png" alt="">
                         <p>زراعة مكان</p>
                         <p id="profileAddedGreenCounter">number</p>
                     </div>
                     <div class="contribution">
-                        <img src="../imgs/bygreen/red-icon-stroked.png" alt="">
+                        <img src="./imgs/bygreen/red-icon-stroked.png" alt="">
                         <p>تبليغ عن مكان يحتاج زراعة</p>
                         <p id="profileAddedRedCounter">number</p>
                     </div>
                     <div class="contribution">
-                        <img src="../imgs/bygreen/yellow-icon-stroked.png" alt="">
+                        <img src="./imgs/bygreen/yellow-icon-stroked.png" alt="">
                         <p>مشاركة في حملة</p>
                         <p id="profileYellowCounter">number</p>
                     </div>
@@ -874,9 +875,9 @@
                 <button id="accountHeader" class="box">الحساب</button>
                 <div class="points">
                     <button class="box" id="publiclineSorting"
-                        style="background-image: url('../imgs/bygreen/bygreen-logo.png');"></button>
+                        style="background-image: url('./imgs/bygreen/bygreen-logo.png');"></button>
                     <button class="box" id="bygreenSorting"
-                        style="background-image: url('../imgs/publicline/publicline-logo.png');"></button>
+                        style="background-image: url('./imgs/publicline/publicline-logo.png');"></button>
                     <button class="box" id="totalSorting">=</button>
                 </div>
             </div>
@@ -917,104 +918,19 @@
 
     </aside>
 
-    <!-- <main>
-        <div class="accountInfo">
-            <img id="profileImg">
-            <div class="info">
-                <h2 id="profileUserName"> account special name </h2>
-                <h3 id="profileName"> name </h3>
-                <p id="profileBio"> bio </p>
-                <p id="profileType" style="color: red;"> type</p>
-
-                <button id="displayEdit" class="owner box">edit info</button>
-            </div>
-            <div class="sm">
-                <a target="_blank" href="" id="cuserInst">
-                    <img src=".../imgs/instagram-colourful-icon.png" id="cuserInstImg">
-                </a>
-                <a target="_blank" href="" id="cuserFb">
-                    <img src=".../imgs/Facebook-logo.png" id="cuserFbImg">
-                </a>
-                <a target="_blank" href="" id="cuserTel">
-                    <img src=".../imgs/telegram-logo.png" id="cuserTelImg">
-                </a>
-            </div>
-            <div id="edit">
-                <div style="display: flex; flex-direction:row; width: fit-content;">
-                    <span id="editForm">
-                        <label for="newProfileImg" class="box">change profile image</label>
-                        <input type="file" id="newProfileImg" name="newProfileImg" style="display: none;">
-                        <input type="text" id="newUserName" placeholder="userName">
-                        <input type="text" id="newName" placeholder="name">
-                        <input type="text" id="newBio" placeholder="bio">
-                    </span>
-                    <span id="smForm">
-                        <input type="text" id="newInst" placeholder="instagram account">
-                        <input type="text" id="newFb" placeholder="facebook account">
-                        <input type="text" id="newTel" placeholder="telegram account">
-                        <button id="sendProfileEdit" class="box">confirm</button>
-                    </span>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <h2>الخط العام</h2>
-            <a href="https://kadum2.github.io/publicline/home/" style="background: #1a1a1a;">
-                <img src=".../imgs/publicline/publicline-logo.png" alt="">
-            </a>
-            <div class="contribution">
-                <img src=".../imgs/publicline/addroutebtn.png" alt="">
-                <p>اضافة مسار</p>
-                <p id="addedRoutesCounter">number</p>
-            </div>
-            <div class="contribution">
-                <img src=".../imgs/publicline/votefeature.png" alt="">
-                <p>تصويت</p>
-                <p id="votedCounter">number</p>
-            </div>
-        </div>
-
-        <div class="project">
-            <h2>تشجير</h2>
-            <a href="https://kadum2.github.io/bygreen/home/" style="background: #1a1a1a;">
-                <img src=".../imgs/bygreen/bygreenlogo.png" alt="">
-            </a>
-            <div class="contribution">
-                <img src=".../imgs/bygreen/redPin.png" alt="">
-                <p>تسجيل مكان</p>
-                <p id="redPinsCounter">number</p>
-            </div>
-            <div class="contribution">
-                <img src=".../imgs/bygreen/greenPin.png" alt="">
-                <p>زراعة مكان</p>
-                <p id="greenPinsCounter">number</p>
-            </div>
-            <div class="contribution">
-                <img src=".../imgs/bygreen/yellowPin.png" alt="">
-                <p>شارك في حملة </p>
-                <p id="yellowPinsCounter">number</p>
-            </div>
-        </div>
-
-
-        <div class="message box">sending data ...</div>
-    </main> -->
-
     <footer>
         <div class="contact">
             <span class="red logoPart"></span>
             <h2>تواصل </h2>
             <span>
                 <a href="https://www.instagram.com/kadum_0/" target="_blank">
-                    <img src="../imgs/instagram-logo.png" alt="">
+                    <img src="./imgs/instagram-logo.png" alt="">
                 </a>
                 <a href="t.me/kadum0" target="_blank">
-                    <img src="../imgs/telegram-logo.png" alt="">
+                    <img src="./imgs/telegram-logo.png" alt="">
                 </a>
                 <a href="https://www.github.com/kadum2" target="_blank">
-                    <img src="../imgs/github-logo.png" alt="">
+                    <img src="./imgs/github-logo.png" alt="">
                 </a>
             </span>
 
@@ -1022,18 +938,6 @@
             <p style="line-height: 0;">makeitgreen002@gmail.com</p>
 
         </div>
-        <!-- 
-        <div class="features">
-            <div class="black logoPart"></div>
-
-            <div class="projectStatics">
-                <b>ivc</b>
-                <li>عدد المستخدمين: <img src="../imgs/account-icon.png" alt=""> <b id="accountsCounter">0</b></li>
-                <li>عدد المساهمات: <img src="../imgs/account-icon.png" alt=""> <b id="contriCounter">0</b></li>
-            </div>
-
-        </div>
--->
 
         <div class="statics">
             <div class="green logoPart"></div>
@@ -1041,31 +945,32 @@
             <div class="projectsInfo">
 
                 <div class="projectStatics">
-                    <b>ivc <img src="../imgs/ivc-logo.png" alt=""></b>
-                    <li>عدد المستخدمين: <img src="../imgs/account-icon.png" alt=""> <b id="accountsCounter">0</b></li>
-                    <li>عدد المساهمات: <img src="../imgs/account-icon.png" alt=""> <b id="contriCounter">0</b></li>
+                    <b>ivc <img src="./imgs/ivc-logo.png" alt=""></b>
+                    <li>عدد المستخدمين: <img src="./imgs/account-icon.png" alt=""> <b id="accountsCounter">0</b></li>
+                    <li>عدد المساهمات: <img src="./imgs/account-icon.png" alt=""> <b id="contriCounter">0</b></li>
                 </div>
 
                 <div class="projectStatics">
-                    <b>publicline <img src="../imgs/publicline/publicline-logo.png" alt=""></b>
-                    <li>المسارات المضافة <img src="../imgs/publicline/add-route-icon.png">
+                    <b>publicline <img src="./imgs/publicline/publicline-logo.png" alt=""></b>
+                    <li>المسارات المضافة <img src="./imgs/publicline/add-route-icon.png">
                         <b id='routesCounter'>0</b>
                     </li>
-                    <li>تم التصويت: <img src="../imgs/publicline/vote-icon.png" alt=""> <b id="votesCounter">0</b></li>
+                    <li>تم التصويت: <img src="./imgs/publicline/vote-icon.png" alt=""> <b id="votesCounter">0</b>
+                    </li>
 
                 </div>
 
                 <br>
                 <div class="projectStatics">
-                    <b>bygreen <img src="../imgs/bygreen/bygreen-logo.png" alt=""></b>
-                    <li>تم زراعتها <img src="../imgs/bygreen/green-icon-stroked.png" alt=""><b id="greenCounter">0</b>
+                    <b>bygreen <img src="./imgs/bygreen/bygreen-logo.png" alt=""></b>
+                    <li>تم زراعتها <img src="./imgs/bygreen/green-icon-stroked.png" alt=""><b id="greenCounter">0</b>
                     </li>
-                    <li>تحتاج الى زراعة <img src="../imgs/bygreen/red-icon-stroked.png"> <b id="redCounter">0</b></li>
-                    <li>الحملات الحالية: <img src="../imgs/bygreen/yellow-icon-stroked.png"> <b id="yellowCounter">0</b>
+                    <li>تحتاج الى زراعة <img src="./imgs/bygreen/red-icon-stroked.png"> <b id="redCounter">0</b></li>
+                    <li>الحملات الحالية: <img src="./imgs/bygreen/yellow-icon-stroked.png"> <b id="yellowCounter">0</b>
                     </li>
-                    <li>عدد النباتات المزروعة: <img src="../imgs/bygreen/plant-icon.png" alt=""> <b
+                    <li>عدد النباتات المزروعة: <img src="./imgs/bygreen/plant-icon.png" alt=""> <b
                             id="contriCounter">0</b></li>
-                    <li>عدد المشاتل: <img src="../imgs/bygreen/shop-icon.png" alt=""> <b id="shopsCounter">0</b></li>
+                    <li>عدد المشاتل: <img src="./imgs/bygreen/shop-icon.png" alt=""> <b id="shopsCounter">0</b></li>
                 </div>
                 <br>
 
@@ -1073,516 +978,618 @@
         </div>
     </footer>
 
-    <!-- <script src="./404.js" type="module"> -->
-
-    </script>
-
-
-    <script src="./script.js" type="module">
-
-
-
+    <script>
         /////////////initializing;
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
 
-import {getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js"
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            onAuthStateChanged,
+            signOut,
+            signInWithEmailAndPassword,
+            signInWithPopup,
+            GoogleAuthProvider
+        } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js"
 
-import { getFirestore, onSnapshot,
-	collection, doc, getDocs, getDoc,
-	addDoc, deleteDoc, setDoc,
-	query, where, orderBy, serverTimestamp,
-	updateDoc, arrayUnion, arrayRemove} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
+        import {
+            getFirestore,
+            onSnapshot,
+            collection,
+            doc,
+            getDocs,
+            getDoc,
+            addDoc,
+            deleteDoc,
+            setDoc,
+            query,
+            where,
+            orderBy,
+            serverTimestamp,
+            updateDoc,
+            arrayUnion,
+            arrayRemove
+        } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
 
-// firebase storage; 
-import {getStorage, ref, uploadBytes, getDownloadURL, listAll, list, deleteObject} from 'https://www.gstatic.com/firebasejs/9.9.2/firebase-storage.js'
-
-
-const bygreenConfig = {
-    apiKey: "AIzaSyDqK1z4fd7lO9g2ISbf-NNROMd7xpxcahc",
-    authDomain: "bygreen-453c9.firebaseapp.com",
-    projectId: "bygreen-453c9",
-    storageBucket: "bygreen-453c9.appspot.com",
-    messagingSenderId: "19954598250",
-    appId: "1:19954598250:web:ba57c792bdf65dbc18a513",
-    measurementId: "G-265TN8HGKX"
-};
-
-const bygreen = initializeApp(bygreenConfig, 'bygreen');
-const bygreenDb = getFirestore(bygreen)
-const bygreenAuth = getAuth(bygreen)
-const bygreenStorage = getStorage(bygreen)
-
-/////////auth state 
-let dbUser ////firestore account 
-let authUser ///auth account
-let type
-let accountsList = []
-
-///////register 
-document.querySelector('#registerBtn').addEventListener('click', (ev)=>{
-    // check if valid data
-
-    // send 
-    if(ev.target.parentElement.querySelector(".em").value.length > 0 &&ev.target.parentElement.querySelector(".em").value.length < 20 && ev.target.parentElement.querySelector(".pw").value.length > 0){
-
-        console.log('make account')
-        createUserWithEmailAndPassword(bygreenAuth, ev.target.parentElement.querySelector(".em").value, ev.target.parentElement.querySelector(".pw").value).then(cred=>{
-            console.log(cred)
-        }).catch(err=>{
-            console.log(err.message)
-            document.querySelector('#errors').textContent = err.message
-            document.querySelector('#errors').style.display = 'block'
-            setTimeout(() => {
-                document.querySelector('#errors').style.display = 'none'
-            }, 10000);
-        })
-    }else{
-
-    }
-    // empty 
-    document.querySelector('#registerUsername').value = ''
-    document.querySelector('#registerPassword').value = ''
-})
-
-//////signin
-document.querySelector('#signinBtn').addEventListener('click', (ev)=>{
-    console.log('to sign in')
-    console.log(ev.target.parentElement)
-    // console.log('click signin', document.querySelector('#signinUsername').value.length)
-    // console.log(document.querySelector('#signinUsername').value.length >0)
-
-    // send 
-    // if(document.querySelector('#signinUsername').value.length > 0 && document.querySelector('#signinPassword').value.length > 0){
-        console.log('make account')
-        signInWithEmailAndPassword(bygreenAuth, ev.target.parentElement.querySelector(".em").value ,ev.target.parentElement.querySelector(".pw").value)
-    // }else{
-
-    // }
-    // empty 
-    ev.target.parentElement.querySelector(".em").value = ''
-    ev.target.parentElement.querySelector(".pw").value = ''
-})
-
-//////signout 
-document.querySelector('#signoutBtn').addEventListener('click', ()=>{
-    signOut(bygreenAuth, (result)=>{console.log(result)})
-})
-document.querySelector('#halfLoggedSignoutBtn').addEventListener('click', ()=>{
-    signOut(bygreenAuth, (result)=>{console.log(result)})
-})
-
-// sign with google  
-const provider = new GoogleAuthProvider()
-document.querySelector('#byGoogle').addEventListener('click', ()=>{
-    signInWithPopup(bygreenAuth, provider).then((cred)=>console.log(cred))
-
-})
-
-//////make profile; 
-document.querySelector('#makeProfileBtn').addEventListener('click', async (ev)=>{
-    //////////set user in the users collection user current user uid 
-    let q = query(collection(bygreenDb, 'users'), where('username', '==', ev.target.parentElement.querySelector('#username').value))
-    let foundDoc = await getDocs(q)
-    let found
-
-    foundDoc.forEach(e=>{
-        found = doc.data()
-        console.log(doc.id, doc.data())
-    })
-    console.log(foundDoc, found)
-    if(!found){
-        console.log('no taken')
-
-        let fileRef = ref(bygreenStorage, '/user-imgs/' + new Date().toISOString().replace(/:/g, '-') +document.querySelector("#userImg").files[0].name.replaceAll(" ","") )
-
-            uploadBytes(fileRef, document.querySelector("#userImg").files[0]).then(res=>{
-                getDownloadURL(res.ref).then(url=>{
-                    console.log(url)
-                    let imgUrl = url
-
-        ///addDoc; add document to a collection; 
-        setDoc(doc(bygreenDb, 'users', authUser.uid), {
-            userName: ev.target.parentElement.querySelector('#username').value,
-            name: ev.target.parentElement.querySelector('#name').value,
-            bio: ev.target.parentElement.querySelector('#bio').value,
-            img: imgUrl,
-            red: [],
-            green: [],
-            yellow:[],
-            addedRoutes: [], 
-            votes: [],
-            type: 'user'
-        }).then(()=>{window.location.reload();}) 
-        
-        })
-    })
+        // firebase storage; 
+        import {
+            getStorage,
+            ref,
+            uploadBytes,
+            getDownloadURL,
+            listAll,
+            list,
+            deleteObject
+        } from 'https://www.gstatic.com/firebasejs/9.9.2/firebase-storage.js'
 
 
+        const bygreenConfig = {
+            apiKey: "AIzaSyDqK1z4fd7lO9g2ISbf-NNROMd7xpxcahc",
+            authDomain: "bygreen-453c9.firebaseapp.com",
+            projectId: "bygreen-453c9",
+            storageBucket: "bygreen-453c9.appspot.com",
+            messagingSenderId: "19954598250",
+            appId: "1:19954598250:web:ba57c792bdf65dbc18a513",
+            measurementId: "G-265TN8HGKX"
+        };
 
-        // setDoc(doc(bygreenDb, 'users', currentUser.uid), {name: ev.target.querySelector('username').value})
-    }else{
-        //////////make messaga section to display errors 
-        console.log('username already taken')
-    }
+        const bygreen = initializeApp(bygreenConfig, 'bygreen');
+        const bygreenDb = getFirestore(bygreen)
+        const bygreenAuth = getAuth(bygreen)
+        const bygreenStorage = getStorage(bygreen)
 
-})
+        /////////auth state 
+        let dbUser ////firestore account 
+        let authUser ///auth account
+        let type
+        let accountsList = []
 
+        ///////register 
+        document.querySelector('#registerBtn').addEventListener('click', (ev) => {
+            // check if valid data
 
+            // send 
+            if (ev.target.parentElement.querySelector(".em").value.length > 0 && ev.target.parentElement
+                .querySelector(".em").value.length < 20 && ev.target.parentElement.querySelector(".pw").value
+                .length > 0) {
 
-
-//////////////////ui-js; 
-
-// di
-document.querySelector("#miniProfileDi").addEventListener("click", (ev)=>{
-    ev.target.classList.toggle('on')
-    if(ev.target.classList.contains('on')){
-        document.querySelector("#miniProfile").style.display = 'block'
-    }else{
-        document.querySelector("#miniProfile").style.display = 'none'
-    }
-})
-document.querySelector('#asideDi').addEventListener('click', (ev)=>{
-    ev.target.classList.toggle('on')
-    ev.target.classList.contains('on')?document.querySelector('aside').style.display = 'flex':document.querySelector('aside').style.display = 'none'
-})
-document.querySelector("#editSectionDi").addEventListener("click", (ev)=>{
-    ev.target.classList.toggle("on")
-    ev.target.classList.contains('on')?document.querySelector("#editSection").style.display = 'flex':document.querySelector("#editSection").style.display = 'none'
-})
-
-
-
-/////////////ui-js-data; 
-// ranking sorting; 
-totalSorting.addEventListener('click', (ev)=>{
-    ev.target.classList.toggle('on')
-    ev.target.classList.contains('on')?ranking('total', 'ac'):ranking('total', 'de')
-})
-publiclineSorting.addEventListener('click', (ev)=>{
-    ev.target.classList.toggle('on')
-    ev.target.classList.contains('on')?ranking('publicline', 'ac'):ranking('publicline', 'de')
-})
-bygreenSorting.addEventListener('click', (ev)=>{
-    ev.target.classList.toggle('on')
-    ev.target.classList.contains('on')?ranking('bygreen', 'ac'):ranking('bygreen', 'de')
-})
-
-
-
-/////////////////////getting; 
-
-let profile
-let profileAccount
-
-    await onAuthStateChanged(bygreenAuth, async (user)=>{
-    console.log('onauthstate; ', user)
-
-    if(user){
-        console.log('from auth ', user)
-        authUser = user
-        user.getIdTokenResult().then(idTokenResult => {
-            console.log('claims', idTokenResult.claims)
-            type = idTokenResult.claims
-            // if team 
-            if (idTokenResult.claims.team){
-                document.querySelectorAll('.teamEle').forEach(teamEle=>{
-                    teamEle.style.display = 'inline-block'
+                console.log('make account')
+                createUserWithEmailAndPassword(bygreenAuth, ev.target.parentElement.querySelector(".em").value,
+                    ev.target.parentElement.querySelector(".pw").value).then(cred => {
+                    console.log(cred)
+                }).catch(err => {
+                    console.log(err.message)
+                    document.querySelector('#errors').textContent = err.message
+                    document.querySelector('#errors').style.display = 'block'
+                    setTimeout(() => {
+                        document.querySelector('#errors').style.display = 'none'
+                    }, 10000);
                 })
-                // document.querySelector('.addYellow').style.display = 'block'
+            } else {
+
+            }
+            // empty 
+            document.querySelector('#registerUsername').value = ''
+            document.querySelector('#registerPassword').value = ''
+        })
+
+        //////signin
+        document.querySelector('#signinBtn').addEventListener('click', (ev) => {
+            console.log('to sign in')
+            console.log(ev.target.parentElement)
+            // console.log('click signin', document.querySelector('#signinUsername').value.length)
+            // console.log(document.querySelector('#signinUsername').value.length >0)
+
+            // send 
+            // if(document.querySelector('#signinUsername').value.length > 0 && document.querySelector('#signinPassword').value.length > 0){
+            console.log('make account')
+            signInWithEmailAndPassword(bygreenAuth, ev.target.parentElement.querySelector(".em").value, ev
+                .target.parentElement.querySelector(".pw").value)
+            // }else{
+
+            // }
+            // empty 
+            ev.target.parentElement.querySelector(".em").value = ''
+            ev.target.parentElement.querySelector(".pw").value = ''
+        })
+
+        //////signout 
+        document.querySelector('#signoutBtn').addEventListener('click', () => {
+            signOut(bygreenAuth, (result) => {
+                console.log(result)
+            })
+        })
+        document.querySelector('#halfLoggedSignoutBtn').addEventListener('click', () => {
+            signOut(bygreenAuth, (result) => {
+                console.log(result)
+            })
+        })
+
+        // sign with google  
+        const provider = new GoogleAuthProvider()
+        document.querySelector('#byGoogle').addEventListener('click', () => {
+            signInWithPopup(bygreenAuth, provider).then((cred) => console.log(cred))
+
+        })
+
+        //////make profile; 
+        document.querySelector('#makeProfileBtn').addEventListener('click', async (ev) => {
+            //////////set user in the users collection user current user uid 
+            let q = query(collection(bygreenDb, 'users'), where('username', '==', ev.target.parentElement
+                .querySelector('#username').value))
+            let foundDoc = await getDocs(q)
+            let found
+
+            foundDoc.forEach(e => {
+                found = doc.data()
+                console.log(doc.id, doc.data())
+            })
+            console.log(foundDoc, found)
+            if (!found) {
+                console.log('no taken')
+
+                let fileRef = ref(bygreenStorage, '/user-imgs/' + new Date().toISOString().replace(/:/g,
+                    '-') + document.querySelector("#userImg").files[0].name.replaceAll(" ", ""))
+
+                uploadBytes(fileRef, document.querySelector("#userImg").files[0]).then(res => {
+                    getDownloadURL(res.ref).then(url => {
+                        console.log(url)
+                        let imgUrl = url
+
+                        ///addDoc; add document to a collection; 
+                        setDoc(doc(bygreenDb, 'users', authUser.uid), {
+                            userName: ev.target.parentElement.querySelector(
+                                '#username').value,
+                            name: ev.target.parentElement.querySelector('#name')
+                                .value,
+                            bio: ev.target.parentElement.querySelector('#bio')
+                                .value,
+                            img: imgUrl,
+                            red: [],
+                            green: [],
+                            yellow: [],
+                            addedRoutes: [],
+                            votes: [],
+                            type: 'user'
+                        }).then(() => {
+                            window.location.reload();
+                        })
+
+                    })
+                })
+
+
+
+                // setDoc(doc(bygreenDb, 'users', currentUser.uid), {name: ev.target.querySelector('username').value})
+            } else {
+                //////////make messaga section to display errors 
+                console.log('username already taken')
             }
 
         })
 
-        let dbUserDoc = await getDoc(doc(bygreenDb, 'users', user.uid))
-        dbUser = dbUserDoc.data()
 
 
 
-        if(dbUser){
-        dbUser.id = dbUserDoc.id
+        //////////////////ui-js; 
 
-
-        // mini profile
-            ////registered
-            document.querySelectorAll('.logged').forEach(e=>{e.style.display = 'block'})
-            document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'none')
-            document.querySelectorAll('.notLogged').forEach(e=>e.style.display = 'none')
-
-            // di
-            document.querySelector('#currentAccountImgDi').style.backgroundImage = `url('${dbUser.img}')`
-            document.querySelector("#currentAccountUsernameDi").textContent = '@'+ dbUser.userName
-
-            // mini
-            document.querySelector('#currentAccountImgMini').style.backgroundImage = `url('${dbUser.img}')`
-            document.querySelector("#currentAccountUsernameMini").textContent = '@'+ dbUser.userName
-            document.querySelector("#currentAccountName").textContent = dbUser.name
-            document.querySelector("#currentAccountBio").textContent = dbUser.bio
-            document.querySelector("#currentAccountLink").href = `https://kadum2.github.io/ivc/profile/${dbUser.userName}`
-
-        }else{
-            /////half registered; make profile
-            document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
-            document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'block')
-            document.querySelectorAll('.notLogged').forEach(e=>e.style.display = 'none')
-        }
-        
-    }else{
-        /////not registered
-        document.querySelectorAll('.logged').forEach(e=>e.style.display = 'none')
-        document.querySelectorAll('.halfLogged').forEach(e=>e.style.display = 'none')
-        document.querySelectorAll('.notlogged').forEach(e=>e.style.display = 'block')
-        dbUser = 'none'
-    }
-
-    getDocs(collection(bygreenDb, 'users')).then((data)=>{
-        let docs = []
-            data.docs.forEach(doc=>{
-                docs.push({...doc.data(), id: doc.id})
-            })
-            accountsList = docs
-            console.log(docs)
-            document.querySelector('#accountsCounter').textContent = accountsList.length
-            ranking('total', 'de')
-
-        //check the url and get the username to make profile 
-        profile = window.location.href.split('/')[window.location.href.split('/').length-2]
-
-        // profile = 'kdm'
-        profileAccount = accountsList.filter(account=>account.userName == profile)[0]
-
-
-            // if owner; 
-        if(dbUser.userName== profile){
-            document.querySelectorAll('.owner').forEach(ownerEle=>{ownerEle.style.display = 'block'})
-        }
-
-
-        console.log(profileAccount)
-    
-        // profile main info
-        document.querySelector('#profileImg').style.backgroundImage = `url('${profileAccount.img}')` 
-        // document.querySelector('#profileImg').setAttribute('src', profileAccount.img) 
-
-        document.querySelector('#profileUsername').textContent = profileAccount.userName
-        document.querySelector('#profileName').textContent = profileAccount.name
-        document.querySelector('#profileBio').textContent = profileAccount.bio
-        
-        // profile sm 
-
-        profileAccount.sm.instagram?document.querySelector('#profileInstagram').setAttribute('href', profileAccount.sm.instagram):null
-        profileAccount.sm.instagram?document.querySelector('#profileInstagram').querySelector('img').style.filter = 'grayscale(0%)' :null
-
-        profileAccount.sm.telegram?document.querySelector('#profileTelegram').setAttribute('href', profileAccount.sm.telegram):null
-        profileAccount.sm.telegram?document.querySelector('#profileTelegram').querySelector('img').style.filter = 'grayscale(0%)' :null
-
-
-        //////projects statics 
-        // publicline
-        document.querySelector('#profileAddedRoutesCounter').textContent = profileAccount.addedRoutes.length
-        document.querySelector('#profileVotedCounter').textContent = profileAccount.votes.length
-
-        // bygreen
-        document.querySelector('#profileAddedGreenCounter').textContent = profileAccount.green.length
-        document.querySelector('#profileAddedRedCounter').textContent = profileAccount.red.length
-        document.querySelector('#profileYellowCounter').textContent = profileAccount.yellow.length
-
-
+        // di
+        document.querySelector("#miniProfileDi").addEventListener("click", (ev) => {
+            ev.target.classList.toggle('on')
+            if (ev.target.classList.contains('on')) {
+                document.querySelector("#miniProfile").style.display = 'block'
+            } else {
+                document.querySelector("#miniProfile").style.display = 'none'
+            }
+        })
+        document.querySelector('#asideDi').addEventListener('click', (ev) => {
+            ev.target.classList.toggle('on')
+            ev.target.classList.contains('on') ? document.querySelector('aside').style.display = 'flex' :
+                document.querySelector('aside').style.display = 'none'
+        })
+        document.querySelector("#editSectionDi").addEventListener("click", (ev) => {
+            ev.target.classList.toggle("on")
+            ev.target.classList.contains('on') ? document.querySelector("#editSection").style.display = 'flex' :
+                document.querySelector("#editSection").style.display = 'none'
         })
 
-    getDocs(collection(bygreenDb, 'pins')).then((data)=>{
+
+
+        /////////////ui-js-data; 
+        // ranking sorting; 
+        totalSorting.addEventListener('click', (ev) => {
+            ev.target.classList.toggle('on')
+            ev.target.classList.contains('on') ? ranking('total', 'ac') : ranking('total', 'de')
+        })
+        publiclineSorting.addEventListener('click', (ev) => {
+            ev.target.classList.toggle('on')
+            ev.target.classList.contains('on') ? ranking('publicline', 'ac') : ranking('publicline', 'de')
+        })
+        bygreenSorting.addEventListener('click', (ev) => {
+            ev.target.classList.toggle('on')
+            ev.target.classList.contains('on') ? ranking('bygreen', 'ac') : ranking('bygreen', 'de')
+        })
+
+
+
+        /////////////////////getting; 
+
+        let profile
+        let profileAccount
+
+        await onAuthStateChanged(bygreenAuth, async (user) => {
+            console.log('onauthstate; ', user)
+
+            if (user) {
+                console.log('from auth ', user)
+                authUser = user
+                user.getIdTokenResult().then(idTokenResult => {
+                    console.log('claims', idTokenResult.claims)
+                    type = idTokenResult.claims
+                    // if team 
+                    if (idTokenResult.claims.team) {
+                        document.querySelectorAll('.teamEle').forEach(teamEle => {
+                            teamEle.style.display = 'inline-block'
+                        })
+                        // document.querySelector('.addYellow').style.display = 'block'
+                    }
+
+                })
+
+                let dbUserDoc = await getDoc(doc(bygreenDb, 'users', user.uid))
+                dbUser = dbUserDoc.data()
+
+
+
+                if (dbUser) {
+                    dbUser.id = dbUserDoc.id
+
+
+                    // mini profile
+                    ////registered
+                    document.querySelectorAll('.logged').forEach(e => {
+                        e.style.display = 'block'
+                    })
+                    document.querySelectorAll('.halfLogged').forEach(e => e.style.display = 'none')
+                    document.querySelectorAll('.notLogged').forEach(e => e.style.display = 'none')
+
+                    // di
+                    document.querySelector('#currentAccountImgDi').style.backgroundImage =
+                        `url('${dbUser.img}')`
+                    document.querySelector("#currentAccountUsernameDi").textContent = '@' + dbUser.userName
+
+                    // mini
+                    document.querySelector('#currentAccountImgMini').style.backgroundImage =
+                        `url('${dbUser.img}')`
+                    document.querySelector("#currentAccountUsernameMini").textContent = '@' + dbUser
+                        .userName
+                    document.querySelector("#currentAccountName").textContent = dbUser.name
+                    document.querySelector("#currentAccountBio").textContent = dbUser.bio
+                    document.querySelector("#currentAccountLink").href =
+                        `https://kadum2.github.io/ivc/profile/${dbUser.userName}`
+
+                } else {
+                    /////half registered; make profile
+                    document.querySelectorAll('.logged').forEach(e => e.style.display = 'none')
+                    document.querySelectorAll('.halfLogged').forEach(e => e.style.display = 'block')
+                    document.querySelectorAll('.notLogged').forEach(e => e.style.display = 'none')
+                }
+
+            } else {
+                /////not registered
+                document.querySelectorAll('.logged').forEach(e => e.style.display = 'none')
+                document.querySelectorAll('.halfLogged').forEach(e => e.style.display = 'none')
+                document.querySelectorAll('.notlogged').forEach(e => e.style.display = 'block')
+                dbUser = 'none'
+            }
+
+            getDocs(collection(bygreenDb, 'users')).then((data) => {
                 let docs = []
-                    data.docs.forEach(doc=>{
-                        docs.push({...doc.data(), id: doc.id})
+                data.docs.forEach(doc => {
+                    docs.push({
+                        ...doc.data(),
+                        id: doc.id
                     })
+                })
+                accountsList = docs
+                console.log(docs)
+                document.querySelector('#accountsCounter').textContent = accountsList.length
+                ranking('total', 'de')
 
-                    let red = 0
-                    let green = 0
-                    let yellow = 0
-                    let redToGreen = 0
+                //check the url and get the username to make profile 
+                profile = window.location.href.split('/')[window.location.href.split('/').length -
+                    2]
 
-                    docs.forEach(generalPin=>{
-                        generalPin.afterImgs?red++:green++
-                        generalPin.next?yellow++:null
-                        generalPin.redToGreen?redToGreen++:null
+                // profile = 'kdm'
+                profileAccount = accountsList.filter(account => account.userName == profile)[0]
+
+
+                // if owner; 
+                if (dbUser.userName == profile) {
+                    document.querySelectorAll('.owner').forEach(ownerEle => {
+                        ownerEle.style.display = 'block'
                     })
+                }
 
-                    document.querySelector('#redCounter').textContent = red
-                    document.querySelector('#greenCounter').textContent = green
-                    document.querySelector('#yellowCounter').textContent = yellow
-                    // document.querySelector('#redToGreenCounter').textContent = green
-        })
-    
-    getDocs(collection(bygreenDb, 'shop')).then((data)=>{
-            let docs = []
-                data.docs.forEach(doc=>{
-                    docs.push({...doc.data(), id: doc.id})
+
+                console.log('getting profile and accountlist', profileAccount, accountsList,
+                    profile)
+
+                // profile main info
+                document.querySelector('#profileImg').style.backgroundImage =
+                    `url('${profileAccount.img}')`
+                // document.querySelector('#profileImg').setAttribute('src', profileAccount.img) 
+
+                document.querySelector('#profileUsername').textContent = profileAccount.userName
+                document.querySelector('#profileName').textContent = profileAccount.name
+                document.querySelector('#profileBio').textContent = profileAccount.bio
+
+                // profile sm 
+
+                profileAccount.sm.instagram ? document.querySelector('#profileInstagram')
+                    .setAttribute('href', profileAccount.sm.instagram) : null
+                profileAccount.sm.instagram ? document.querySelector('#profileInstagram')
+                    .querySelector('img').style.filter = 'grayscale(0%)' : null
+
+                profileAccount.sm.telegram ? document.querySelector('#profileTelegram')
+                    .setAttribute('href', profileAccount.sm.telegram) : null
+                profileAccount.sm.telegram ? document.querySelector('#profileTelegram')
+                    .querySelector('img').style.filter = 'grayscale(0%)' : null
+
+
+                //////projects statics 
+                // publicline
+                document.querySelector('#profileAddedRoutesCounter').textContent = profileAccount
+                    .addedRoutes.length
+                document.querySelector('#profileVotedCounter').textContent = profileAccount.votes
+                    .length
+
+                // bygreen
+                document.querySelector('#profileAddedGreenCounter').textContent = profileAccount
+                    .green.length
+                document.querySelector('#profileAddedRedCounter').textContent = profileAccount.red
+                    .length
+                document.querySelector('#profileYellowCounter').textContent = profileAccount.yellow
+                    .length
+
+
+            })
+
+            getDocs(collection(bygreenDb, 'pins')).then((data) => {
+                let docs = []
+                data.docs.forEach(doc => {
+                    docs.push({
+                        ...doc.data(),
+                        id: doc.id
+                    })
+                })
+
+                let red = 0
+                let green = 0
+                let yellow = 0
+                let redToGreen = 0
+
+                docs.forEach(generalPin => {
+                    generalPin.afterImgs ? red++ : green++
+                    generalPin.next ? yellow++ : null
+                    generalPin.redToGreen ? redToGreen++ : null
+                })
+
+                document.querySelector('#redCounter').textContent = red
+                document.querySelector('#greenCounter').textContent = green
+                document.querySelector('#yellowCounter').textContent = yellow
+                // document.querySelector('#redToGreenCounter').textContent = green
+            })
+
+            getDocs(collection(bygreenDb, 'shop')).then((data) => {
+                let docs = []
+                data.docs.forEach(doc => {
+                    docs.push({
+                        ...doc.data(),
+                        id: doc.id
+                    })
                 })
                 // console.log(docs[0].upvotes.length + docs[0].downvotes)
                 document.querySelector('#shopsCounter').textContent = docs.length
-        })
+            })
 
-    getDocs(collection(bygreenDb, 'routes')).then((data)=>{
+            getDocs(collection(bygreenDb, 'routes')).then((data) => {
                 let docs = []
-                    data.docs.forEach(doc=>{
-                        docs.push({...doc.data(), id: doc.id})
+                data.docs.forEach(doc => {
+                    docs.push({
+                        ...doc.data(),
+                        id: doc.id
                     })
-                    console.log(docs[0].upvotes.length + docs[0].downvotes)
-                    document.querySelector('#routesCounter').textContent = docs.length
-                    let votes = 0
-                    docs.forEach(route=> votes += (route.upvotes.length + route.downvotes.length))
-                    // document.querySelector('#votesCounter').textContent = docs.filter
-                    document.querySelector('#votesCounter').innerHTML = votes
+                })
+                console.log(docs[0].upvotes.length + docs[0].downvotes)
+                document.querySelector('#routesCounter').textContent = docs.length
+                let votes = 0
+                docs.forEach(route => votes += (route.upvotes.length + route.downvotes.length))
+                // document.querySelector('#votesCounter').textContent = docs.filter
+                document.querySelector('#votesCounter').innerHTML = votes
             })
 
-    })
-
-
-/////////////////sending 
-
-// make edits; update profile
-document.querySelector('#submitProfileEdit').addEventListener('click', (ev)=>{
-    // check if valid 
-
-    if(document.querySelector('#newUsername').value){
-        console.log('to send new username ', dbUser.id, document.querySelector('#newUsername').value)
-        // sending alarm
-        document.querySelector('#greenMessage').style.display = 'block'
-        document.querySelector('#greenMessage').style.textContent = 'sending ...'
-        updateDoc(doc(bygreenDb, 'users', dbUser.id), {userName: document.querySelector('#newUsername').value}).then(data=>{
-            document.querySelector('#greenMessage').style.textContent = 'sent'
-            
-            setTimeout(() => {
-            document.querySelector('#greenMessage').style.display = 'none'
-            }, 1000);
         })
-    }
-    if(document.querySelector('#newName').value){
-        console.log('to send new username ', dbUser.id, document.querySelector('#newName').value)
-        // sending alarm
-        document.querySelector('#greenMessage').style.display = 'block'
-        document.querySelector('#greenMessage').textContent = 'sending ...'
-        updateDoc(doc(bygreenDb, 'users', dbUser.id), {name: document.querySelector('#newName').value}).then(data=>{
 
-            document.querySelector('#greenMessage').style.textContent = 'sent'
-            setTimeout(() => {
-            document.querySelector('#greenMessage').style.display = 'none'
-            }, 1000);
-        })
-    }
-    if(document.querySelector('#newBio').value){
-        console.log('to send new username ', dbUser.id, document.querySelector('#newBio').value)
-        // sending alarm
-        document.querySelector('#greenMessage').style.display = 'block'
-        document.querySelector('#greenMessage').textContent = 'sending ...'
-        updateDoc(doc(bygreenDb, 'users', dbUser.id), {bio: document.querySelector('#newBio').value}).then(data=>{
-            document.querySelector('#greenMessage').style.textContent = 'sent'
-            
-            setTimeout(() => {
-                document.querySelector('#greenMessage').style.display = 'none'
-            }, 1000);
-        })
-    }
-    if(document.querySelector('#newProfileImg').files[0]){
-        console.log('to send new username ', dbUser.id, document.querySelector('#newProfileImg').files)
-        // sending alarm
-        document.querySelector('#greenMessage').style.display = 'block'
-        document.querySelector('#greenMessage').style.textContent = 'sending ...'
-        //send img then get url; 
 
-        let fileRef = ref(bygreenStorage, '/userimgs/' + new Date().toISOString().replace(/:/g, '-') +document.querySelector("#newProfileImg").files[0].name.replaceAll(" ","") )
+        /////////////////sending 
 
-        uploadBytes(fileRef, document.querySelector("#newProfileImg").files[0]).then(res=>{
-            getDownloadURL(res.ref).then(url=>{
-                console.log(url)
-                console.log('old url', dbUser.img)
-                let imgUrl = url
+        // make edits; update profile
+        document.querySelector('#submitProfileEdit').addEventListener('click', (ev) => {
+            // check if valid 
 
-                // delete old img
-                deleteObject(ref(bygreenStorage, 'user-imgs/'+ dbUser.img)).then(data=>console.log('img deleted'))
+            if (document.querySelector('#newUsername').value) {
+                console.log('to send new username ', dbUser.id, document.querySelector('#newUsername').value)
+                // sending alarm
+                document.querySelector('#greenMessage').style.display = 'block'
+                document.querySelector('#greenMessage').style.textContent = 'sending ...'
+                updateDoc(doc(bygreenDb, 'users', dbUser.id), {
+                    userName: document.querySelector('#newUsername').value
+                }).then(data => {
+                    document.querySelector('#greenMessage').style.textContent = 'sent'
 
-            updateDoc(doc(bygreenDb, 'users', dbUser.id), {img: url}).then(data=>{
-                document.querySelector('#greenMessage').style.textContent = 'sent'
-                
-                setTimeout(() => {
-                document.querySelector('#greenMessage').style.display = 'none'
-                }, 1000);
-            })
-        })
+                    setTimeout(() => {
+                        document.querySelector('#greenMessage').style.display = 'none'
+                    }, 1000);
+                })
+            }
+            if (document.querySelector('#newName').value) {
+                console.log('to send new username ', dbUser.id, document.querySelector('#newName').value)
+                // sending alarm
+                document.querySelector('#greenMessage').style.display = 'block'
+                document.querySelector('#greenMessage').textContent = 'sending ...'
+                updateDoc(doc(bygreenDb, 'users', dbUser.id), {
+                    name: document.querySelector('#newName').value
+                }).then(data => {
+
+                    document.querySelector('#greenMessage').style.textContent = 'sent'
+                    setTimeout(() => {
+                        document.querySelector('#greenMessage').style.display = 'none'
+                    }, 1000);
+                })
+            }
+            if (document.querySelector('#newBio').value) {
+                console.log('to send new username ', dbUser.id, document.querySelector('#newBio').value)
+                // sending alarm
+                document.querySelector('#greenMessage').style.display = 'block'
+                document.querySelector('#greenMessage').textContent = 'sending ...'
+                updateDoc(doc(bygreenDb, 'users', dbUser.id), {
+                    bio: document.querySelector('#newBio').value
+                }).then(data => {
+                    document.querySelector('#greenMessage').style.textContent = 'sent'
+
+                    setTimeout(() => {
+                        document.querySelector('#greenMessage').style.display = 'none'
+                    }, 1000);
+                })
+            }
+            if (document.querySelector('#newProfileImg').files[0]) {
+                console.log('to send new username ', dbUser.id, document.querySelector('#newProfileImg').files)
+                // sending alarm
+                document.querySelector('#greenMessage').style.display = 'block'
+                document.querySelector('#greenMessage').style.textContent = 'sending ...'
+                //send img then get url; 
+
+                let fileRef = ref(bygreenStorage, '/userimgs/' + new Date().toISOString().replace(/:/g, '-') +
+                    document.querySelector("#newProfileImg").files[0].name.replaceAll(" ", ""))
+
+                uploadBytes(fileRef, document.querySelector("#newProfileImg").files[0]).then(res => {
+                    getDownloadURL(res.ref).then(url => {
+                        console.log(url)
+                        console.log('old url', dbUser.img)
+                        let imgUrl = url
+
+                        // delete old img
+                        deleteObject(ref(bygreenStorage, 'user-imgs/' + dbUser.img)).then(
+                            data => console.log('img deleted'))
+
+                        updateDoc(doc(bygreenDb, 'users', dbUser.id), {
+                            img: url
+                        }).then(data => {
+                            document.querySelector('#greenMessage').style.textContent =
+                                'sent'
+
+                            setTimeout(() => {
+                                document.querySelector('#greenMessage').style
+                                    .display = 'none'
+                            }, 1000);
+                        })
+                    })
 
 
 
                 })
 
-    }
-    if(document.querySelector('#newInstagram').value){
-        console.log('to send new username ', dbUser.id, document.querySelector('#newInstagram').value)
-        // sending alarm
-        document.querySelector('#greenMessage').style.display = 'block'
-        document.querySelector('#greenMessage').style.textContent = 'sending ...'
-        updateDoc(doc(bygreenDb, 'users', dbUser.id), {'sm.instagram': document.querySelector('#newInstagram').value}).then(data=>{
-            document.querySelector('#greenMessage').style.textContent = 'sent'
-            
-            setTimeout(() => {
-            document.querySelector('#greenMessage').style.display = 'none'
-            }, 1000);
+            }
+            if (document.querySelector('#newInstagram').value) {
+                console.log('to send new username ', dbUser.id, document.querySelector('#newInstagram').value)
+                // sending alarm
+                document.querySelector('#greenMessage').style.display = 'block'
+                document.querySelector('#greenMessage').style.textContent = 'sending ...'
+                updateDoc(doc(bygreenDb, 'users', dbUser.id), {
+                    'sm.instagram': document.querySelector('#newInstagram').value
+                }).then(data => {
+                    document.querySelector('#greenMessage').style.textContent = 'sent'
+
+                    setTimeout(() => {
+                        document.querySelector('#greenMessage').style.display = 'none'
+                    }, 1000);
+                })
+            }
+            if (document.querySelector('#newTelegram').value) {
+                console.log('to send new username ', dbUser.id, document.querySelector('#newTelegram').value)
+                // sending alarm
+                document.querySelector('#greenMessage').style.display = 'block'
+                document.querySelector('#greenMessage').style.textContent = 'sending ...'
+                updateDoc(doc(bygreenDb, 'users', dbUser.id), {
+                    'sm.telegram': document.querySelector('#newTelegram').value
+                }).then(data => {
+                    document.querySelector('#greenMessage').style.textContent = 'sent'
+
+                    setTimeout(() => {
+                        document.querySelector('#greenMessage').style.display = 'none'
+                    }, 1000);
+                })
+            }
+            // send
         })
-    }
-    if(document.querySelector('#newTelegram').value){
-        console.log('to send new username ', dbUser.id, document.querySelector('#newTelegram').value)
-        // sending alarm
-        document.querySelector('#greenMessage').style.display = 'block'
-        document.querySelector('#greenMessage').style.textContent = 'sending ...'
-        updateDoc(doc(bygreenDb, 'users', dbUser.id), {'sm.telegram': document.querySelector('#newTelegram').value}).then(data=>{
-            document.querySelector('#greenMessage').style.textContent = 'sent'
-            
-            setTimeout(() => {
-            document.querySelector('#greenMessage').style.display = 'none'
-            }, 1000);
-        })
-    }
-    // send
-})
 
-//////////// functions
-function ranking(based, order){
+        //////////// functions
+        function ranking(based, order) {
 
-        // restructure the accounts array
-    //label the current account to be green 
+            // restructure the accounts array
+            //label the current account to be green 
 
-    let intendedOrder = []
-    let orderedUserElements
-    let orderedteamElements
+            let intendedOrder = []
+            let orderedUserElements
+            let orderedteamElements
 
-    if(based == 'total'){
-        if(order == 'de'){
-            // decending order 
-            intendedOrder = accountsList.sort((a, b) => { return (b.green.length+b.red.length +b.addedRoutes.length + b.votes.length)-(a.green.length +a.red.length+a.addedRoutes.length + a.votes.length)}) 
-        }else{
-            //acending order 
-            intendedOrder = accountsList.sort((a, b) => { return (a.green.length +a.red.length+a.addedRoutes.length + a.votes.length) - (b.green.length+b.red.length +b.addedRoutes.length + b.votes.length)})
-        }
-    }else if(based == 'publicline'){
-        if(order == 'de'){
-            intendedOrder = accountsList.sort((a,b)=>{return (b.addedRoutes.length + b.votes.length) - (a.addedRoutes.length + a.votes.length)})
-        }else{
-            intendedOrder = accountsList.sort((a,b)=>{return (a.addedRoutes.length + a.votes.length)- (b.addedRoutes.length + b.votes.length)})
-        }
+            if (based == 'total') {
+                if (order == 'de') {
+                    // decending order 
+                    intendedOrder = accountsList.sort((a, b) => {
+                        return (b.green.length + b.red.length + b.addedRoutes.length + b.votes.length) - (a
+                            .green.length + a.red.length + a.addedRoutes.length + a.votes.length)
+                    })
+                } else {
+                    //acending order 
+                    intendedOrder = accountsList.sort((a, b) => {
+                        return (a.green.length + a.red.length + a.addedRoutes.length + a.votes.length) - (b
+                            .green.length + b.red.length + b.addedRoutes.length + b.votes.length)
+                    })
+                }
+            } else if (based == 'publicline') {
+                if (order == 'de') {
+                    intendedOrder = accountsList.sort((a, b) => {
+                        return (b.addedRoutes.length + b.votes.length) - (a.addedRoutes.length + a.votes.length)
+                    })
+                } else {
+                    intendedOrder = accountsList.sort((a, b) => {
+                        return (a.addedRoutes.length + a.votes.length) - (b.addedRoutes.length + b.votes.length)
+                    })
+                }
 
-    }else if(based == 'bygreen'){
-        if(order == 'de'){
-            intendedOrder = accountsList.sort((a,b)=>{return (b.red.length + b.green.length) - (a.red.length + a.green.length)})
-        }else{
-            intendedOrder = accountsList.sort((a,b)=>{return (a.red.length + a.green.length)- (b.red.length + b.green.length)})
-        }
-    }
+            } else if (based == 'bygreen') {
+                if (order == 'de') {
+                    intendedOrder = accountsList.sort((a, b) => {
+                        return (b.red.length + b.green.length) - (a.red.length + a.green.length)
+                    })
+                } else {
+                    intendedOrder = accountsList.sort((a, b) => {
+                        return (a.red.length + a.green.length) - (b.red.length + b.green.length)
+                    })
+                }
+            }
 
-    // make the dom
-    let currentUserName 
-    dbUser?currentUserName=dbUser.userName:null
+            // make the dom
+            let currentUserName
+            dbUser ? currentUserName = dbUser.userName : null
 
-    let userCounter= 1
-    orderedUserElements = `${intendedOrder.map((account, index)=>{
+            let userCounter = 1
+            orderedUserElements = `${intendedOrder.map((account, index)=>{
         if(account.type == 'user'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'id="#me" style="background-color: #29D659"':''}>
 
@@ -1603,8 +1610,8 @@ function ranking(based, order){
 })}`
 
 
-        let teamCounter = 1
-    orderedteamElements = `${intendedOrder.map((account, index)=>{
+            let teamCounter = 1
+            orderedteamElements = `${intendedOrder.map((account, index)=>{
         if(account.type == 'team'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'style="background-color: #29D659"':''}>
         <div class="ranking point">${teamCounter++}</div>
@@ -1622,14 +1629,10 @@ function ranking(based, order){
     `}
         })}`
 
-    // console.log('intended order',intendedOrder)
-    document.querySelector('#usersRanking').innerHTML = orderedUserElements.replaceAll(',', '')
-    document.querySelector('#teamsRanking').innerHTML = orderedteamElements.replaceAll(',', '')
-}
-
-
-
-
+            // console.log('intended order',intendedOrder)
+            document.querySelector('#usersRanking').innerHTML = orderedUserElements.replaceAll(',', '')
+            document.querySelector('#teamsRanking').innerHTML = orderedteamElements.replaceAll(',', '')
+        }
     </script>
 
 </body>

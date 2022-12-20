@@ -271,6 +271,8 @@ let profileAccount
         profileAccount = accountsList.filter(account=>account.userName == profile)[0]
 
 
+        console.log('profile name ...', profile, profileAccount, accountsList)
+
             // if owner; 
         if(dbUser.userName== profile){
             document.querySelectorAll('.owner').forEach(ownerEle=>{ownerEle.style.display = 'block'})
