@@ -978,7 +978,7 @@
         </div>
     </footer>
 
-    <script>
+    <script type="module">
         /////////////initializing;
 
         import {
@@ -1305,6 +1305,8 @@
 
                 // profile = 'kdm'
                 profileAccount = accountsList.filter(account => account.userName == profile)[0]
+
+                console.log('profile name ...', profile, profileAccount, accountsList)
 
 
                 // if owner; 
