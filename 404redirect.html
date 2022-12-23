@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redirect error page</title>
+</head>
+
+<body>
+
+    <div>hhhhhhhh; make later</div>
+
+
+    <script>
+        console.log('redirect page; ')
+
+        window.onload = () => {
+
+            // get current url; then set into pushstate
+            console.log(window.location.href)
+            window.history.pushState('./404.html', './404.html', window.location.href + 'hhaaaa');
+
+
+            console.log(document.referrer)
+
+
+            // var xmlhttp = new XMLHttpRequest();
+            // xmlhttp.open("GET", 'https://kadum2.github.io/publicline/home/index.html');
+            // xmlhttp.send();
+            // return xmlhttp.responseText;
+
+            // reload the page 
+
+        }
+
+
+        // check the type of the dynamic link
+        // if(){
+        // }
+    </script>
+</body>
+
+</html>
