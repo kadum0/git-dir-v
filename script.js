@@ -159,8 +159,8 @@ document.querySelector("#miniProfileDi").addEventListener("click", (ev)=>{
 })
 
 document.querySelector('#asideDi').addEventListener('click', (ev)=>{
-    ev.target.classList.toggle('on')
-    ev.target.classList.contains('on')?document.querySelector('aside').style.display = 'flex':document.querySelector('aside').style.display = 'none'
+    ev.target.classList.toggle('red')
+    ev.target.classList.contains('red')?document.querySelector('aside').style.display = 'flex':document.querySelector('aside').style.display = 'none'
 })
 
 
@@ -293,12 +293,31 @@ let profileAccount
                         docs.push({...doc.data(), id: doc.id})
                     })
                     console.log(docs[0].upvotes.length + docs[0].downvotes)
-                    document.querySelector('#routesCounter').textContent = docs.length
+                    
+                    let completedRoutes = 0
+                    let uncompletedRoutes = 0
+                    docs.forEach(route=>route.start&&route.end?completedRoutes++:uncompletedRoutes++)
+
+                    document.querySelector('#completedRoutesCounter').textContent = completedRoutes
+                    document.querySelector('#uncompletedRoutesCounter').textContent = uncompletedRoutes
+
+
                     let votes = 0
                     docs.forEach(route=> votes += (route.upvotes.length + route.downvotes.length))
                     // document.querySelector('#votesCounter').textContent = docs.filter
                     document.querySelector('#votesCounter').innerHTML = votes
         })
+    
+    getDocs(collection(bygreenDb, 'unroutes')).then((data)=>{
+            let docs = []
+                data.docs.forEach(doc=>{
+                    docs.push({...doc.data(), id: doc.id})
+                })
+                console.log(docs[0].upvotes.length + docs[0].downvotes)
+
+
+                document.querySelector('#unconfirmedRoutesCounter').textContent = docs.length
+    })
 
     })
 
@@ -350,10 +369,10 @@ function ranking(based, order){
 <div class="rankedAccount" ${account.userName == currentUserName?'id="#me" style="background-color: #29D659"':''}>
 
         <div class="ranking point">${userCounter++}</div>
-        <div href=' https://kadum2.github.io/ivc/profile/kdm//${account.userName}' class="account">
+        <a href=' https://kadum2.github.io/ivc/profile/${account.userName}' class="account">
             <img class="accountImg" style="background-image: url('${account.img}');">
             <h3 class="accountUsername ranked">${account.userName}</h3>
-        </div>
+        </a>
             
 
         <div class='points'>
@@ -371,10 +390,10 @@ function ranking(based, order){
         if(account.type == 'team'){return`
 <div class="rankedAccount" ${account.userName == currentUserName?'style="background-color: #29D659"':''}>
         <div class="ranking point">${teamCounter++}</div>
-        <div href=' https://kadum2.github.io/ivc/profile/kdm//${account.userName}' class="account">
+        <a href=' https://kadum2.github.io/ivc/profile/${account.userName}' class="account">
             <img class="accountImg" style="background-image: url('${account.img}');">
             <h3 class="accountUsername ranked">${account.userName}</h3>
-        </div>
+        </a>
 
         <div class='points'>
     <div class="publiclineCounter point">${(account.addedRoutes[0]?account.addedRoutes.length:0)+(account.votes[0]?account.votes.length:0)}</div>

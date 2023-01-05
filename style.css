@@ -21,8 +21,8 @@ header{
     gap: 1rem;
 }
 .logo div{
-    height: 30%;
-    width: 75%;
+    height: 25%;
+    width: 65%;
     margin-bottom: 10%;
     transform: rotateZ(-15deg);
     }
@@ -30,12 +30,20 @@ header{
         height: 3rem;
         width: 3rem;
     }
-
-#asideDi{
-    padding: .7rem;
-    z-index: 10;
-}
-
+    #asideDi{
+        padding: .7rem;
+        z-index: 1004;
+        /* background: #303832; */
+        /* background-color: #333333; */
+        border-radius: .3rem;
+        transition: .1s linear;
+        cursor: pointer;
+        /* height: 2rem; */
+    }
+    #asideDi img{
+        height: 1rem;
+    }
+    
 
 #miniProfile{
     position: absolute;
@@ -132,6 +140,7 @@ main {
     background-size: contain;
     background-position: bottom;
     transition: .1s linear;
+    /* display: inline-block; */
 }
 .project:hover{
     box-shadow: 1.2rem 1.2rem 0 #C0F9D0 ;
@@ -170,6 +179,10 @@ main {
     gap: .5rem;
     font-weight: bold;
 }
+.projectBtns a{
+    display: inline;
+}
+
 
 #messages{
     position: absolute;
@@ -216,7 +229,7 @@ aside{
     border: #27f060 1px solid;
     max-height: 70vh;
     /* box-sizing: border-box; */
-    /* overflow: hidden; */
+    overflow: scroll;
 }
 .leaderBoard button{
     background-repeat: no-repeat;
@@ -258,6 +271,10 @@ aside{
     max-width: 100%;
     box-sizing: border-box;
 }
+.rankedAccount .account{
+    color: white;
+
+}
 .points{
     display: flex;
     width: 7rem;
@@ -273,6 +290,7 @@ aside{
     flex-direction: column;
     background: #29D659;
     border: #a0f7b9 2px solid;
+    padding: .3rem;
 }
 .rankedAccount .accountImg{
     min-height: 2rem;
@@ -393,12 +411,16 @@ main div,main p,main h1,main h2,main h3,main h4,main h5,main h6{
 
 body *{
     box-sizing: border-box;
+    font-family: 'Prosto One', 'Changa';
+    font-size: .8rem;
+
 }
 img{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 2rem;
+    pointer-events: none;
 }
 input[type=text]{
     font-size: 1rem;
@@ -409,6 +431,8 @@ input[type=file]{
 a{
     text-decoration: none;
     color: black;
+    display: inline-block;
+
 }
 button{
     background-position: center;
@@ -472,18 +496,25 @@ button{
 
 .red {
     background: #ff2a2a;
+    background-image: linear-gradient(135deg,  #ED2121,  #CD1A1A);
+
 }
 
 .green {
     background: #27f060;
+    background-image: linear-gradient(135deg,  #27F060,  #21C24F);
+
 }
 
 .black {
     background: #1b1b1b;
+    background-image: linear-gradient(135deg,  #1A1A1A,  #0E0E0E);
+
 }
 
 .white {
     background: rgb(245, 245, 245);
+    background-image: linear-gradient(135deg,  #F5F5F5,  #DEDEDE);
 }
 
 /* mobile */
