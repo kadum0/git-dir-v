@@ -144,8 +144,15 @@ main {
 }
 .project:hover{
     box-shadow: 1.2rem 1.2rem 0 #C0F9D0 ;
-
 }
+.project a{
+    background-size: contain;
+    background-position: bottom;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* display: block; */
+}
+
 .projectLogo{
     position: absolute;
     top: -1rem;
@@ -157,6 +164,9 @@ main {
 .projectTitle{
     text-align: center;
     color: white;
+    position: absolute;
+    top: 10%;
+    right: 10%;
 }
 
 .projectDescription{
@@ -169,6 +179,7 @@ main {
     direction: ltr;
     padding: .5rem;
     color: white;
+    display: flex;
 }
 .projectBtns{
     position: absolute;
@@ -178,6 +189,7 @@ main {
     flex-direction: column;
     gap: .5rem;
     font-weight: bold;
+    text-align: center;
 }
 .projectBtns a{
     display: inline;
@@ -451,6 +463,9 @@ button{
     display: none;
 }
 .teamEle{
+    display: none;
+}
+.en{
     display: none;
 }
 .box{
